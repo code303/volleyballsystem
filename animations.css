@@ -1,0 +1,1478 @@
+
+/* A N I M A T I O N S  */
+
+/* -------------------  */
+/* P O S I T I O N   1  -  S E R V I C E */
+div.setterOffence1 {
+    -webkit-animation:setterOffence1 5s; /* Safari and Chrome */
+    animation:setterOffence1 5s; /* Safari and Chrome */
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+@-webkit-keyframes setterOffence1 /* Safari and Chrome */
+{
+    30% {background:#cc0000; left:65%; top:90%;}
+    70% {background:#cc0000; left:65%; top:90%;}
+    100% {background:#33b5e5; left:65%; top:50%;}
+}
+@keyframes setterOffence1
+{
+    30% {background:#cc0000; left:65%; top:90%;}
+    70% {background:#cc0000; left:65%; top:90%;}
+    100% {background:#33b5e5; left:65%; top:50%;}
+}
+
+div.outsideOneOffence1 {
+    -webkit-animation:outsideOneOffence1 5s; /* Safari and Chrome */
+    animation:outsideOneOffence1 5s; /* Safari and Chrome */
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+@-webkit-keyframes outsideOneOffence1 /* Safari and Chrome */
+{
+    30% {left:55%; top:20%;}
+    70% {left:55%; top:20%;}
+    100% {left:10%; top:5%;}
+}
+@keyframes outsideOneOffence1
+{
+    30% {left:55%; top:20%;}
+    70% {left:55%; top:20%;}
+    100% {left:10%; top:5%;}
+}
+
+div.middleOneOffence1 {
+    -webkit-animation:middleOneOffence1 5s; /* Safari and Chrome */
+    animation:middleOneOffence1 5s; /* Safari and Chrome */
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+@-webkit-keyframes middleOneOffence1 /* Safari and Chrome */
+{
+    30% {left:42%; top:5%;}
+    70% {left:42%; top:5%;}
+    100% {left:42%; top:5%;}
+}
+@keyframes middleOneOffence1
+{
+    30% {left:42%; top:5%;}
+    70% {left:42%; top:5%;}
+    100% {left:42%; top:5%;}
+}
+
+div.oppositeOffence1 {
+    -webkit-animation:oppositeOffence1 5s; /* Safari and Chrome */
+    animation:oppositeOffence1 5s; /* Safari and Chrome */
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+@-webkit-keyframes oppositeOffence1 /* Safari and Chrome */
+{
+    30% {left:30%; top:20%;}
+    70% {left:30%; top:20%;}
+    100% {left:75%; top:5%;}
+}
+@keyframes oppositeOffence1
+{
+    30% {left:30%; top:20%;}
+    70% {left:30%; top:20%;}
+    100% {left:75%; top:5%;}
+}
+
+div.outsideTwoOffence1 {
+    -webkit-animation:outsideTwoOffence1 5s; /* Safari and Chrome */
+    animation:outsideTwoOffence1 5s; /* Safari and Chrome */
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+@-webkit-keyframes outsideTwoOffence1 /* Safari and Chrome */
+{
+    30% {left:20%; top:50%;}
+    70% {left:20%; top:50%;}
+    100% {left:20%; top:50%;}
+}
+@keyframes outsideTwoOffence1
+{
+    30% {left:20%; top:50%;}
+    70% {left:20%; top:50%;}
+    100% {left:20%; top:50%;}
+}
+
+div.middleTwoOffence1 {
+    -webkit-animation:middleTwoOffence1 5s; /* Safari and Chrome */
+    animation:middleTwoOffence1 5s; /* Safari and Chrome */
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+@-webkit-keyframes middleTwoOffence1 /* Safari and Chrome */
+{
+    30% {top:80%;}
+    70% {top:80%;}
+    100% {top:80%;}
+}
+@keyframes middleTwoOffence1
+{
+    30% {top:80%;}
+    70% {top:80%;}
+    100% {top:80%;}
+}
+
+
+/* -------------------  */
+/* P O S I T I O N   1  -  D E F E N C E */
+div.setterDefence1 {
+    -webkit-animation:setterDefence1 9s; /* Safari and Chrome */
+    animation:setterDefence1 9s; /* Safari and Chrome */
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+@-webkit-keyframes setterDefence1 /* Safari and Chrome */
+{
+    20% {background:#c3c3c3; left:80%; top:65%;}
+    40% {background:#c3c3c3; left:80%; top:65%;}
+    60% {background:#cc0000; left:65%; top:5%;}
+    80% {background:#33b5e5; left:65%; top:50%;}
+    100% {background:#33b5e5; left:65%; top:50%;}
+}
+@keyframes setterDefence1
+{
+    20% {background:#c3c3c3; left:80%; top:65%;}
+    40% {background:#c3c3c3; left:80%; top:65%;}
+    60% {background:#cc0000; left:65%; top:5%;}
+    80% {background:#33b5e5; left:65%; top:50%;}
+    100% {background:#33b5e5; left:65%; top:50%;}
+}
+
+div.outsideOneDefence1 {
+    -webkit-animation:outsideOneDefence1 9s; /* Safari and Chrome */
+    animation:outsideOneDefence1 9s; /* Safari and Chrome */
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+@-webkit-keyframes outsideOneDefence1 /* Safari and Chrome */
+{
+    20% {left:65%; top:50%;}
+    40% {left:65%; top:50%;}
+    60% {left:75%; top:25%;}
+    80% {left:75%; top:5%;}
+    100% {left:10%; top:5%;}
+}
+@keyframes outsideOneDefence1
+{
+    20% {left:65%; top:50%;}
+    40% {left:65%; top:50%;}
+    60% {left:75%; top:25%;}
+    80% {left:75%; top:5%;}
+    100% {left:10%; top:5%;}
+}
+
+div.middleOneDefence1 {
+    -webkit-animation:middleOneDefence1 9s; /* Safari and Chrome */
+    animation:middleOneDefence1 9s; /* Safari and Chrome */
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+@-webkit-keyframes middleOneDefence1 /* Safari and Chrome */
+{
+    20% {left:42%; top:25%;}
+    40% {left:42%; top:25%;}
+    60% {left:42%; top:25%;}
+    80% {left:42%; top:5%;}
+    100% {left:42%; top:5%;}
+}
+@keyframes middleOneDefence1
+{
+    20% {left:42%; top:25%;}
+    40% {left:42%; top:25%;}
+    60% {left:42%; top:25%;}
+    80% {left:42%; top:5%;}
+    100% {left:42%; top:5%;}
+}
+
+div.oppositeDefence1 {
+    -webkit-animation:oppositeDefence1 9s; /* Safari and Chrome */
+    animation:oppositeDefence1 9s; /* Safari and Chrome */
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+@-webkit-keyframes oppositeDefence1 /* Safari and Chrome */
+{
+    20% {left:0%; top:25%;}
+    40% {left:0%; top:25%;}
+    60% {left:10%; top:25%;}
+    80% {left:10%; top:5%;}
+    100% {left:75%; top:5%;}
+}
+@keyframes oppositeDefence1
+{
+    20% {left:0%; top:25%;}
+    40% {left:0%; top:25%;}
+    60% {left:10%; top:25%;}
+    80% {left:10%; top:5%;}
+    100% {left:75%; top:5%;}
+}
+
+div.outsideTwoDefence1 {
+    -webkit-animation:outsideTwoDefence1 9s; /* Safari and Chrome */
+    animation:outsideTwoDefence1 9s; /* Safari and Chrome */
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+@-webkit-keyframes outsideTwoDefence1 /* Safari and Chrome */
+{
+    20% {left:20%; top:50%;}
+    40% {left:20%; top:50%;}
+    60% {left:20%; top:50%;}
+    80% {left:20%; top:50%;}
+    100% {left:20%; top:50%;}
+}
+@keyframes outsideTwoDefence1
+{
+    20% {left:20%; top:50%;}
+    40% {left:20%; top:50%;}
+    60% {left:20%; top:50%;}
+    80% {left:20%; top:50%;}
+    100% {left:20%; top:50%;}
+}
+
+div.middleTwoDefence1 {
+    -webkit-animation:middleTwoDefence1 9s; /* Safari and Chrome */
+    animation:middleTwoDefence1 9s; /* Safari and Chrome */
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+@-webkit-keyframes middleTwoDefence1 /* Safari and Chrome */
+{
+    20% {top:80%;}
+    40% {top:80%;}
+    60% {top:80%;}
+    80% {top:80%;}
+    100% {top:80%;}
+}
+@keyframes middleTwoDefence1
+{
+    20% {top:80%;}
+    40% {top:80%;}
+    60% {top:80%;}
+    80% {top:80%;}
+    100% {top:80%;}
+}
+
+/* -------------------  */
+/* P O S I T I O N   2  -  S E R V I C E */
+div.setterOffence2 {
+    -webkit-animation:setterOffence2 5s; /* Safari and Chrome */
+    animation:setterOffence2 5s; /* Safari and Chrome */
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+@-webkit-keyframes setterOffence2 /* Safari and Chrome */
+{
+    30% {left:55%; top:5%;}
+    70% {left:55%; top:5%;}
+    100% {left:75%; top:5%;}
+}@keyframes setterOffence2
+{
+    30% {left:55%; top:5%;}
+    70% {left:55%; top:5%;}
+    100% {left:75%; top:5%;}
+}
+
+div.outsideOneOffence2 {
+    -webkit-animation:outsideOneOffence2 5s; /* Safari and Chrome */
+    animation:outsideOneOffence2 5s; /* Safari and Chrome */
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+@-webkit-keyframes outsideOneOffence2 /* Safari and Chrome */
+{
+    30% {left:42%; top:20%;}
+    70% {left:42%; top:20%;}
+    100% {left:10%; top:5%;}
+}
+@keyframes outsideOneOffence2
+{
+    30% {left:42%; top:20%;}
+    70% {left:42%; top:20%;}
+    100% {left:10%; top:5%;}
+}
+
+div.middleOneOffence2 {
+    -webkit-animation:middleOneOffence2 5s; /* Safari and Chrome */
+    animation:middleOneOffence2 5s; /* Safari and Chrome */
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+@-webkit-keyframes middleOneOffence2 /* Safari and Chrome */
+{
+    30% {left:35%; top:5%;}
+    70% {left:35%; top:5%;}
+    100% {left:42%; top:5%;}
+}
+@keyframes middleOneOffence2
+{
+    30% {left:35%; top:5%;}
+    70% {left:35%; top:5%;}
+    100% {left:42%; top:5%;}
+}
+
+div.oppositeOffence2 {
+    -webkit-animation:oppositeOffence2 5s; /* Safari and Chrome */
+    animation:oppositeOffence2 5s; /* Safari and Chrome */
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+@-webkit-keyframes oppositeOffence2 /* Safari and Chrome */
+{
+    30% {left:25%; top:60%;}
+    70% {left:25%; top:60%;}
+    100% {left:65%; top:50%;}
+}
+@keyframes oppositeOffence2
+{
+    30% {left:25%; top:60%;}
+    70% {left:25%; top:60%;}
+    100% {left:65%; top:50%;}
+}
+
+div.outsideTwoOffence2 {
+    -webkit-animation:outsideTwoOffence2 5s; /* Safari and Chrome */
+    animation:outsideTwoOffence2 5s; /* Safari and Chrome */
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+@-webkit-keyframes outsideTwoOffence2 /* Safari and Chrome */
+{
+    30% {left:42%; top:50%;}
+    70% {left:42%; top:50%;}
+    100% {left:20%; top:50%;}
+}
+@keyframes outsideTwoOffence2
+{
+    30% {left:42%; top:50%;}
+    70% {left:42%; top:50%;}
+    100% {left:20%; top:50%;}
+}
+
+div.middleTwoOffence2 {
+    -webkit-animation:middleTwoOffence2 5s; /* Safari and Chrome */
+    animation:middleTwoOffence2 5s; /* Safari and Chrome */
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+@-webkit-keyframes middleTwoOffence2 /* Safari and Chrome */
+{
+    30% {background:#cc0000; left:65%; top:90%;}
+    70% {background:#cc0000; left:65%; top:90%;}
+    100% {background:#33b5e5; left:42%; top:80%;}
+}
+@keyframes middleTwoOffence2
+{
+    30% {background:#cc0000; left:65%; top:90%;}
+    70% {background:#cc0000; left:65%; top:90%;}
+    100% {background:#33b5e5; left:42%; top:80%;}
+}
+
+/* -------------------  */
+/* P O S I T I O N   2  -  D E F E N C E */
+div.setterDefence2 {
+    -webkit-animation:setterDefence2 7s; /* Safari and Chrome */
+    animation:setterDefence2 7s; /* Safari and Chrome */
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+@-webkit-keyframes setterDefence2 /* Safari and Chrome */
+{
+    20% {background:#99cc00; left:75%; top:5%;}
+    60% {background:#99cc00; left:75%; top:5%;}
+    80% {background:#cc0000; left:75%; top:5%;}
+    100% {background:#99cc00; left:75%; top:5%;}
+}    
+@keyframes setterDefence2
+{
+    20% {background:#99cc00; left:75%; top:5%;}
+    60% {background:#99cc00; left:75%; top:5%;}
+    80% {background:#cc0000; left:75%; top:5%;}
+    100% {background:#99cc00; left:75%; top:5%;}
+}
+
+div.outsideOneDefence2 {
+    -webkit-animation:outsideOneDefence2 7s; /* Safari and Chrome */
+    animation:outsideOneDefence2 7s; /* Safari and Chrome */
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+@-webkit-keyframes outsideOneDefence2 /* Safari and Chrome */
+{
+    20% {left:20%; top:50%;}
+    60% {left:20%; top:50%;}
+    80% {left:10%; top:20%;}
+    100% {left:10%; top:5%;}
+}
+@keyframes outsideOneDefence2
+{
+    20% {left:20%; top:50%;}
+    60% {left:20%; top:50%;}
+    80% {left:10%; top:20%;}
+    100% {left:10%; top:5%;}
+}
+
+div.middleOneDefence2 {
+    -webkit-animation:middleOneDefence2 7s; /* Safari and Chrome */
+    animation:middleOneDefence2 7s; /* Safari and Chrome */
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+@-webkit-keyframes middleOneDefence2 /* Safari and Chrome */
+{
+    20% {left:5%; top:25%;}
+    60% {left:5%; top:25%;}
+    80% {left:42%; top:20%;}
+    100% {left:42%; top:5%;}
+}
+@keyframes middleOneDefence2
+{
+    20% {left:5%; top:25%;}
+    60% {left:5%; top:25%;}
+    80% {left:42%; top:20%;}
+    100% {left:42%; top:5%;}
+}
+
+div.oppositeDefence2 {
+    -webkit-animation:oppositeDefence2 7s; /* Safari and Chrome */
+    animation:oppositeDefence2 7s; /* Safari and Chrome */
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+@-webkit-keyframes oppositeDefence2 /* Safari and Chrome */
+{
+    20% {background:#c3c3c3; left:25%; top:90%;}
+    60% {background:#c3c3c3; left:25%; top:90%;}
+    80% {background:#33b5e5;left:65%; top:50%;}
+    100% {left:65%; top:50%;}
+}
+@keyframes oppositeDefence2
+{
+    20% {background:#c3c3c3; left:25%; top:90%;}
+    60% {background:#c3c3c3; left:25%; top:90%;}
+    80% {background:#33b5e5;left:65%; top:50%;}
+    100% {left:65%; top:50%;}
+}
+
+div.outsideTwoDefence2 {
+    -webkit-animation:outsideTwoDefence2 7s; /* Safari and Chrome */
+    animation:outsideTwoDefence2 7s; /* Safari and Chrome */
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+@-webkit-keyframes outsideTwoDefence2 /* Safari and Chrome */
+{
+    20% {left:42%; top:80%;}
+    60% {left:42%; top:80%;}
+    80% {left:20%; top:50%;}
+    100% {left:20%; top:50%;}
+}
+@keyframes outsideTwoDefence2
+{
+    20% {left:42%; top:80%;}
+    60% {left:42%; top:80%;}
+    80% {left:20%; top:50%;}
+    100% {left:20%; top:50%;}
+}
+
+div.middleTwoDefence2 {
+    -webkit-animation:middleTwoDefence2 7s; /* Safari and Chrome */
+    animation:middleTwoDefence2 7s; /* Safari and Chrome */
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+@-webkit-keyframes middleTwoDefence2 /* Safari and Chrome */
+{
+    20% {left:65%; top:50%;}
+    60% {left:65%; top:50%;}
+    80% {left:42%; top:80%;}
+    100% {left:42%; top:80%;}
+}
+@keyframes middleTwoDefence2
+{
+    20% {left:65%; top:50%;}
+    60% {left:65%; top:50%;}
+    80% {left:42%; top:80%;}
+    100% {left:42%; top:80%;}
+}
+
+/* -------------------  */
+/* P O S I T I O N   3  -  S E R V I C E */
+div.setterOffence3 {
+    -webkit-animation:setterOffence3 5s; /* Safari and Chrome */
+    animation:setterOffence3 5s; /* Safari and Chrome */
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+@-webkit-keyframes setterOffence3 /* Safari and Chrome */
+{
+    30% {left:42%; top:20%;}
+    70% {left:42%; top:20%;}
+    100% {left:75%; top:5%;}
+}
+@keyframes setterOffence3
+{
+    30% {left:42%; top:20%;}
+    70% {left:42%; top:20%;}
+    100% {left:75%; top:5%;}
+}
+
+div.outsideOneOffence3 {
+    -webkit-animation:outsideOneOffence3 5s; /* Safari and Chrome */
+    animation:outsideOneOffence3 5s; /* Safari and Chrome */
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+@-webkit-keyframes outsideOneOffence3 /* Safari and Chrome */
+{
+    30% {left:30%; top:5%;}
+    70% {left:30%; top:5%;}
+    100% {left:10%; top:5%;}
+}
+@keyframes outsideOneOffence3
+{
+    30% {left:30%; top:5%;}
+    70% {left:30%; top:5%;}
+    100% {left:10%; top:5%;}
+}
+
+div.middleOneOffence3 {
+    -webkit-animation:middleOneOffence3 5s; /* Safari and Chrome */
+    animation:middleOneOffence3 5s; /* Safari and Chrome */
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+@-webkit-keyframes middleOneOffence3 /* Safari and Chrome */
+{
+    30% {left:25%; top:80%;}
+    70% {left:25%; top:80%;}
+    100% {left:42%; top:80%;}
+}
+@keyframes middleOneOffence3
+{
+    30% {left:25%; top:80%;}
+    70% {left:25%; top:80%;}
+    100% {left:42%; top:80%;}
+}
+
+div.oppositeOffence3 {
+    -webkit-animation:oppositeOffence3 5s; /* Safari and Chrome */
+    animation:oppositeOffence3 5s; /* Safari and Chrome */
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+@-webkit-keyframes oppositeOffence3 /* Safari and Chrome */
+{
+    30% {left:42%; top:50%;}
+    70% {left:42%; top:50%;}
+    100% {left:65%; top:50%;}
+}
+@keyframes oppositeOffence3
+{
+    30% {left:42%; top:50%;}
+    70% {left:42%; top:50%;}
+    100% {left:65%; top:50%;}
+}
+
+div.outsideTwoOffence3 {
+    -webkit-animation:outsideTwoOffence3 5s; /* Safari and Chrome */
+    animation:outsideTwoOffence3 5s; /* Safari and Chrome */
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+@-webkit-keyframes outsideTwoOffence3 /* Safari and Chrome */
+{
+    30% {background:#cc0000; left:65%; top:90%;}
+    70% {background:#cc0000; left:65%; top:90%;}
+    100% {background:#33b5e5; left:20%; top:50%;}
+}
+@keyframes outsideTwoOffence3
+{
+    30% {background:#cc0000; left:65%; top:90%;}
+    70% {background:#cc0000; left:65%; top:90%;}
+    100% {background:#33b5e5; left:20%; top:50%;}
+}
+
+div.middleTwoOffence3 {
+    -webkit-animation:middleTwoOffence3 5s; /* Safari and Chrome */
+    animation:middleTwoOffence3 5s; /* Safari and Chrome */
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+@-webkit-keyframes middleTwoOffence3 /* Safari and Chrome */
+{
+    30% {left:55%; top:5%;}
+    70% {left:55%; top:5%;}
+    100% {left:42%; top:5%;}
+}
+@keyframes middleTwoOffence3
+{
+    30% {left:55%; top:5%;}
+    70% {left:55%; top:5%;}
+    100% {left:42%; top:5%;}
+}
+
+/* -------------------  */
+/* P O S I T I O N   3  -  D E F E N C E */
+div.setterDefence3 {
+    -webkit-animation:setterDefence3 7s; /* Safari and Chrome */
+    animation:setterDefence3 7s; /* Safari and Chrome */
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+@-webkit-keyframes setterDefence3 /* Safari and Chrome */
+{
+    20% {background:#99cc00; left:42%; top:10%;}
+    60% {background:#99cc00; left:42%; top:10%;}
+    80% {background:#cc0000; left:75%; top:5%;}
+    100% {background:#99cc00; left:75%; top:5%;}
+}
+@keyframes setterDefence3
+{
+    20% {background:#99cc00; left:42%; top:10%;}
+    60% {background:#99cc00; left:42%; top:10%;}
+    80% {background:#cc0000; left:75%; top:5%;}
+    100% {background:#99cc00; left:75%; top:5%;}
+}
+
+div.outsideOneDefence3 {
+    -webkit-animation:outsideOneDefence3 7s; /* Safari and Chrome */
+    animation:outsideOneDefence3 7s; /* Safari and Chrome */
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+@-webkit-keyframes outsideOneDefence3 /* Safari and Chrome */
+{
+    20% {left:20%; top:50%;}
+    60% {left:20%; top:50%;}
+    80% {left:10%; top:20%;}
+    100% {left:10%; top:5%;}
+}
+@keyframes outsideOneDefence3
+{
+    20% {left:20%; top:50%;}
+    60% {left:20%; top:50%;}
+    80% {left:10%; top:20%;}
+    100% {left:10%; top:5%;}
+}
+
+div.middleOneDefence3 {
+    -webkit-animation:middleOneDefence3 7s; /* Safari and Chrome */
+    animation:middleOneDefence3 7s; /* Safari and Chrome */
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+@-webkit-keyframes middleOneDefence3 /* Safari and Chrome */
+{
+    20% {left:42%; top:80%;}
+    60% {left:42%; top:80%;}
+    80% {left:42%; top:80%;}
+    100% {left:42%; top:80%;}
+}
+@keyframes middleOneDefence3
+{
+    20% {left:42%; top:80%;}
+    60% {left:42%; top:80%;}
+    80% {left:42%; top:80%;}
+    100% {left:42%; top:80%;}
+}
+
+div.oppositeDefence3 {
+    -webkit-animation:oppositeDefence3 7s; /* Safari and Chrome */
+    animation:oppositeDefence3 7s; /* Safari and Chrome */
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+@-webkit-keyframes oppositeDefence3 /* Safari and Chrome */
+{
+    20% {background:#c3c3c3; left:60%; top:90%;}
+    60% {background:#c3c3c3; left:60%; top:90%;}
+    80% {background:#c3c3c3; left:65%; top:50%;}
+    100% {background:#33b5e5;left:65%; top:50%;}
+}
+@keyframes oppositeDefence3
+{
+    20% {background:#c3c3c3; left:60%; top:90%;}
+    60% {background:#c3c3c3; left:60%; top:90%;}
+    80% {background:#c3c3c3; left:65%; top:50%;}
+    100% {background:#33b5e5;left:65%; top:50%;}
+}
+
+div.outsideTwoDefence3 {
+    -webkit-animation:outsideTwoDefence3 7s; /* Safari and Chrome */
+    animation:outsideTwoDefence3 7s; /* Safari and Chrome */
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+@-webkit-keyframes outsideTwoDefence3 /* Safari and Chrome */
+{
+    20% {left:65%; top:50%;}
+    60% {left:65%; top:50%;}
+    80% {left:20%; top:50%;}
+    100% {left:20%; top:50%;}
+}
+@keyframes outsideTwoDefence3
+{
+    20% {left:65%; top:50%;}
+    60% {left:65%; top:50%;}
+    80% {left:20%; top:50%;}
+    100% {left:20%; top:50%;}
+}
+
+div.middleTwoDefence3 {
+    -webkit-animation:middleTwoDefence3 7s; /* Safari and Chrome */
+    animation:middleTwoDefence3 7s; /* Safari and Chrome */
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+@-webkit-keyframes middleTwoDefence3 /* Safari and Chrome */
+{
+    20% {left:65%; top:10%;}
+    60% {left:65%; top:10%;}
+    80% {left:42%; top:20%;}
+    100% {left:42%; top:5%;}
+}
+@keyframes middleTwoDefence3
+{
+    20% {left:65%; top:10%;}
+    60% {left:65%; top:10%;}
+    80% {left:42%; top:20%;}
+    100% {left:42%; top:5%;}
+}
+
+/* -------------------  */
+/* P O S I T I O N   4  -  S E R V I C E */
+div.setterOffence4 {
+    -webkit-animation:setterOffence4 5s; /* Safari and Chrome */
+    animation:setterOffence4 5s; /* Safari and Chrome */
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+@-webkit-keyframes setterOffence4 /* Safari and Chrome */
+{
+    30% {left:30%; top:14%;}
+    70% {left:30%; top:14%;}
+    100% {left:75%; top:5%;}
+}
+@keyframes setterOffence4
+{
+    30% {left:30%; top:14%;}
+    70% {left:30%; top:14%;}
+    100% {left:75%; top:5%;}
+}
+
+div.outsideOneOffence4 {
+    -webkit-animation:outsideOneOffence4 5s; /* Safari and Chrome */
+    animation:outsideOneOffence4 5s; /* Safari and Chrome */
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+@-webkit-keyframes outsideOneOffence4 /* Safari and Chrome */
+{
+    30% {left:20%; top:50%;}
+    70% {left:20%; top:50%;}
+    100% {left:20%; top:50%;}
+}
+@keyframes outsideOneOffence4
+{
+    30% {left:20%; top:50%;}
+    70% {left:20%; top:50%;}
+    100% {left:20%; top:50%;}
+}
+
+div.middleOneOffence4 {
+    -webkit-animation:middleOneOffence4 5s; /* Safari and Chrome */
+    animation:middleOneOffence4 5s; /* Safari and Chrome */
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+@-webkit-keyframes middleOneOffence4 /* Safari and Chrome */
+{
+    30% {left:42%; top:80%;}
+    70% {left:42%; top:80%;}
+    100% {left:42%; top:80%;}
+}
+@keyframes middleOneOffence4
+{
+    30% {left:42%; top:80%;}
+    70% {left:42%; top:80%;}
+    100% {left:42%; top:80%;}
+}
+
+div.oppositeOffence4 {
+    -webkit-animation:oppositeOffence4 5s; /* Safari and Chrome */
+    animation:oppositeOffence4 5s; /* Safari and Chrome */
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+@-webkit-keyframes oppositeOffence4 /* Safari and Chrome */
+{
+    30% {background:#cc0000; left:65%; top:90%;}
+    70% {background:#cc0000; left:65%; top:90%;}
+    100% {left:65%; top:50%;}
+}
+@keyframes oppositeOffence4
+{
+    30% {background:#cc0000; left:65%; top:90%;}
+    70% {background:#cc0000; left:65%; top:90%;}
+    100% {left:65%; top:50%;}
+}
+
+div.outsideTwoOffence4 {
+    -webkit-animation:outsideTwoOffence4 5s; /* Safari and Chrome */
+    animation:outsideTwoOffence4 5s; /* Safari and Chrome */
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+@-webkit-keyframes outsideTwoOffence4 /* Safari and Chrome */
+{
+    30% {left:55%; top:20%;}
+    70% {left:55%; top:20%;}
+    100% {left:10%; top:5%;}
+}
+@keyframes outsideTwoOffence4
+{
+    30% {left:55%; top:20%;}
+    70% {left:55%; top:20%;}
+    100% {left:10%; top:5%;}
+}
+
+div.middleTwoOffence4 {
+    -webkit-animation:middleTwoOffence4 5s; /* Safari and Chrome */
+    animation:middleTwoOffence4 5s; /* Safari and Chrome */
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+@-webkit-keyframes middleTwoOffence4 /* Safari and Chrome */
+{
+    30% {left:42%; top:5%;}
+    70% {left:42%; top:5%;}
+    100% {left:42%; top:5%;}
+}
+@keyframes middleTwoOffence4
+{
+    30% {left:42%; top:5%;}
+    70% {left:42%; top:5%;}
+    100% {left:42%; top:5%;}
+}
+
+/* -------------------  */
+/* P O S I T I O N   4  -  D E F E N C E */
+div.setterDefence4 {
+    -webkit-animation:setterDefence4 7s; /* Safari and Chrome */
+    animation:setterDefence4 7s; /* Safari and Chrome */
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+@-webkit-keyframes setterDefence4 /* Safari and Chrome */
+{
+    20% {background:#99cc00; left:1%; top:5%;}
+    60% {background:#99cc00; left:1%; top:5%;}
+    80% {background:#cc0000; left:75%; top:5%;}
+    100% {background:#99cc00; left:75%; top:5%;}
+}
+@keyframes setterDefence4
+{
+    20% {background:#99cc00; left:1%; top:5%;}
+    60% {background:#99cc00; left:1%; top:5%;}
+    80% {background:#cc0000; left:75%; top:5%;}
+    100% {background:#99cc00; left:75%; top:5%;}
+}
+
+div.outsideOneDefence4 {
+    -webkit-animation:outsideOneDefence4 7s; /* Safari and Chrome */
+    animation:outsideOneDefence4 7s; /* Safari and Chrome */
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+@-webkit-keyframes outsideOneDefence4 /* Safari and Chrome */
+{
+    20% {left:42%; top:80%;}
+    60% {left:42%; top:80%;}
+    80% {left:20%; top:50%;}
+    100% {left:20%; top:50%;}
+}
+@keyframes outsideOneDefence4
+{
+    20% {left:42%; top:80%;}
+    60% {left:42%; top:80%;}
+    80% {left:20%; top:50%;}
+    100% {left:20%; top:50%;}
+}
+
+div.middleOneDefence4 {
+    -webkit-animation:middleOneDefence4 7s; /* Safari and Chrome */
+    animation:middleOneDefence4 7s; /* Safari and Chrome */
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+@-webkit-keyframes middleOneDefence4 /* Safari and Chrome */
+{
+    20% {left:65%; top:50%;}
+    60% {left:65%; top:50%;}
+    80% {left:42%; top:80%;}
+    100% {left:42%; top:80%;}
+}
+@keyframes middleOneDefence4
+{
+    20% {left:65%; top:50%;}
+    60% {left:65%; top:50%;}
+    80% {left:42%; top:80%;}
+    100% {left:42%; top:80%;}
+}
+
+div.oppositeDefence4 {
+    -webkit-animation:oppositeDefence4 7s; /* Safari and Chrome */
+    animation:oppositeDefence4 7s; /* Safari and Chrome */
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+@-webkit-keyframes oppositeDefence4 /* Safari and Chrome */
+{
+    20% {background:#c3c3c3; left:80%; top:75%;}
+    60% {background:#c3c3c3; left:80%; top:75%;}
+    80% {background:#c3c3c3; left:65%; top:50%;}
+    100% {background:#33b5e5;left:65%; top:50%;}
+}
+@keyframes oppositeDefence4
+{
+    20% {background:#c3c3c3; left:80%; top:75%;}
+    60% {background:#c3c3c3; left:80%; top:75%;}
+    80% {background:#c3c3c3; left:65%; top:50%;}
+    100% {background:#33b5e5;left:65%; top:50%;}
+}
+
+div.outsideTwoDefence4 {
+    -webkit-animation:outsideTwoDefence4 7s; /* Safari and Chrome */
+    animation:outsideTwoDefence4 7s; /* Safari and Chrome */
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+@-webkit-keyframes outsideTwoDefence4 /* Safari and Chrome */
+{
+    20% {left:20%; top:50%;}
+    60% {left:20%; top:50%;}
+    80% {left:10%; top:20%;}
+    100% {left:10%; top:5%;}
+}
+@keyframes outsideTwoDefence4
+{
+    20% {left:20%; top:50%;}
+    60% {left:20%; top:50%;}
+    80% {left:10%; top:20%;}
+    100% {left:10%; top:5%;}
+}
+
+div.middleTwoDefence4 {
+    -webkit-animation:middleTwoDefence4 7s; /* Safari and Chrome */
+    animation:middleTwoDefence4 7s; /* Safari and Chrome */
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+@-webkit-keyframes middleTwoDefence4 /* Safari and Chrome */
+{
+    20% {left:7%; top:15%;}
+    60% {left:7%; top:15%;}
+    80% {left:42%; top:20%;}
+    100% {left:42%; top:5%;}
+}
+@keyframes middleTwoDefence4
+{
+    20% {left:7%; top:15%;}
+    60% {left:7%; top:15%;}
+    80% {left:42%; top:20%;}
+    100% {left:42%; top:5%;}
+}
+
+/* -------------------  */
+/* P O S I T I O N   5  -  S E R V I C E */
+div.setterOffence5 {
+    -webkit-animation:setterOffence5 5s; /* Safari and Chrome */
+    animation:setterOffence5 5s; /* Safari and Chrome */
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+@-webkit-keyframes setterOffence5 /* Safari and Chrome */
+{
+    30% {left:20%; top:50%;}
+    70% {left:20%; top:50%;}
+    100% {left:65%; top:50%;}
+}
+@keyframes setterOffence5
+{
+    30% {left:20%; top:50%;}
+    70% {left:20%; top:50%;}
+    100% {left:65%; top:50%;}
+}
+
+div.outsideOneOffence5 {
+    -webkit-animation:outsideOneOffence5 5s; /* Safari and Chrome */
+    animation:outsideOneOffence5 5s; /* Safari and Chrome */
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+@-webkit-keyframes outsideOneOffence5 /* Safari and Chrome */
+{
+    30% {left:42%; top:70%;}
+    70% {left:42%; top:70%;}
+    100% {left:20%; top:50%;}
+}
+@keyframes outsideOneOffence5
+{
+    30% {left:42%; top:70%;}
+    70% {left:42%; top:70%;}
+    100% {left:20%; top:50%;}
+}
+
+div.middleOneOffence5 {
+    -webkit-animation:middleOneOffence5 5s; /* Safari and Chrome */
+    animation:middleOneOffence5 5s; /* Safari and Chrome */
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+@-webkit-keyframes middleOneOffence5 /* Safari and Chrome */
+{
+    30% {background:#cc0000; left:65%; top:90%;}
+    70% {background:#cc0000; left:65%; top:90%;}
+    100% {left:42%; top:80%;}
+}
+@keyframes middleOneOffence5
+{
+    30% {background:#cc0000; left:65%; top:90%;}
+    70% {background:#cc0000; left:65%; top:90%;}
+    100% {left:42%; top:80%;}
+}
+
+div.oppositeOffence5 {
+    -webkit-animation:oppositeOffence5 5s; /* Safari and Chrome */
+    animation:oppositeOffence5 5s; /* Safari and Chrome */
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+@-webkit-keyframes oppositeOffence5 /* Safari and Chrome */
+{
+    30% {left:55%; top:5%;}
+    70% {left:55%; top:5%;}
+    100% {left:75%; top:5%;}
+}
+@keyframes oppositeOffence5
+{
+    30% {left:55%; top:5%;}
+    70% {left:55%; top:5%;}
+    100% {left:75%; top:5%;}
+}
+
+div.outsideTwoOffence5 {
+    -webkit-animation:outsideTwoOffence5 5s; /* Safari and Chrome */
+    animation:outsideTwoOffence5 5s; /* Safari and Chrome */
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+@-webkit-keyframes outsideTwoOffence5 /* Safari and Chrome */
+{
+    30% {left:42%; top:20%;}
+    70% {left:42%; top:20%;}
+    100% {left:10%; top:5%;}
+}
+@keyframes outsideTwoOffence5
+{
+    30% {left:42%; top:20%;}
+    70% {left:42%; top:20%;}
+    100% {left:10%; top:5%;}
+}
+
+div.middleTwoOffence5 {
+    -webkit-animation:middleTwoOffence5 5s; /* Safari and Chrome */
+    animation:middleTwoOffence5 5s; /* Safari and Chrome */
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+@-webkit-keyframes middleTwoOffence5 /* Safari and Chrome */
+{
+    30% {left:30%; top:5%;}
+    70% {left:30%; top:5%;}
+    100% {left:42%; top:5%;}
+}
+@keyframes middleTwoOffence5
+{
+    30% {left:30%; top:5%;}
+    70% {left:30%; top:5%;}
+    100% {left:42%; top:5%;}
+}
+
+/* -------------------  */
+/* P O S I T I O N   5  -  D E F E N C E */
+div.setterDefence5 {
+    -webkit-animation:setterDefence5 7s; /* Safari and Chrome */
+    animation:setterDefence5 7s; /* Safari and Chrome */
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+@-webkit-keyframes setterDefence5 /* Safari and Chrome */
+{
+    20% {background:#c3c3c3; left:0%; top:15%;}
+    60% {background:#c3c3c3; left:0%; top:15%;}
+    80% {background:#cc0000; left:65%; top:5%;}
+    100% {background:#33b5e5; left:65%; top:50%;}
+}
+@keyframes setterDefence5
+{
+    20% {background:#c3c3c3; left:0%; top:15%;}
+    60% {background:#c3c3c3; left:0%; top:15%;}
+    80% {background:#cc0000; left:65%; top:5%;}
+    100% {background:#33b5e5; left:65%; top:50%;}
+}
+
+div.outsideOneDefence5 {
+    -webkit-animation:outsideOneDefence5 7s; /* Safari and Chrome */
+    animation:outsideOneDefence5 7s; /* Safari and Chrome */
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+@-webkit-keyframes outsideOneDefence5 /* Safari and Chrome */
+{
+    20% {left:42%; top:80%;}
+    60% {left:42%; top:80%;}
+    80% {left:20%; top:50%;}
+    100% {left:20%; top:50%;}
+}
+@keyframes outsideOneDefence5
+{
+    20% {left:42%; top:80%;}
+    60% {left:42%; top:80%;}
+    80% {left:20%; top:50%;}
+    100% {left:20%; top:50%;}
+}
+
+div.middleOneDefence5 {
+    -webkit-animation:middleOneDefence5 7s; /* Safari and Chrome */
+    animation:middleOneDefence5 7s; /* Safari and Chrome */
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+@-webkit-keyframes middleOneDefence5 /* Safari and Chrome */
+{
+    20% {left:65%; top:50%;}
+    60% {left:65%; top:50%;}
+    80% {left:42%; top:80%;}
+    100% {left:42%; top:80%;}
+}
+@keyframes middleOneDefence5
+{
+    20% {left:65%; top:50%;}
+    60% {left:65%; top:50%;}
+    80% {left:42%; top:80%;}
+    100% {left:42%; top:80%;}
+}
+
+div.oppositeDefence5 {
+    -webkit-animation:oppositeDefence5 7s; /* Safari and Chrome */
+    animation:oppositeDefence5 7s; /* Safari and Chrome */
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+@-webkit-keyframes oppositeDefence5 /* Safari and Chrome */
+{
+    20% {left:80%; top:30%;}
+    60% {left:80%; top:30%;}
+    80% {left:75%; top:20%;}
+    100% {left:75%; top:5%;}
+}
+@keyframes oppositeDefence5
+{
+    20% {left:80%; top:30%;}
+    60% {left:80%; top:30%;}
+    80% {left:75%; top:20%;}
+    100% {left:75%; top:5%;}
+}
+
+div.outsideTwoDefence5 {
+    -webkit-animation:outsideTwoDefence5 7s; /* Safari and Chrome */
+    animation:outsideTwoDefence5 7s; /* Safari and Chrome */
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+@-webkit-keyframes outsideTwoDefence5 /* Safari and Chrome */
+{
+    20% {left:20%; top:50%;}
+    60% {left:20%; top:50%;}
+    80% {left:10%; top:20%;}
+    100% {left:10%; top:5%;}
+}
+@keyframes outsideTwoDefence5
+{
+    20% {left:20%; top:50%;}
+    60% {left:20%; top:50%;}
+    80% {left:10%; top:20%;}
+    100% {left:10%; top:5%;}
+}
+
+div.middleTwoDefence5 {
+    -webkit-animation:middleTwoDefence5 7s; /* Safari and Chrome */
+    animation:middleTwoDefence5 7s; /* Safari and Chrome */
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+@-webkit-keyframes middleTwoDefence5 /* Safari and Chrome */
+{
+    20% {left:0%; top:5%;}
+    60% {left:0%; top:5%;}
+    80% {left:42%; top:20%;}
+    100% {left:42%; top:5%;}
+}
+@keyframes middleTwoDefence5
+{
+    20% {left:0%; top:5%;}
+    60% {left:0%; top:5%;}
+    80% {left:42%; top:20%;}
+    100% {left:42%; top:5%;}
+}
+
+/* -------------------  */
+/* P O S I T I O N   6  -  S E R V I C E */
+div.setterOffence6 {
+    -webkit-animation:setterOffence6 5s; /* Safari and Chrome */
+    animation:setterOffence6 5s; /* Safari and Chrome */
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+@-webkit-keyframes setterOffence6 /* Safari and Chrome */
+{
+    30% {left:42%; top:50%;}
+    70% {left:42%; top:50%;}
+    100% {left:65%; top:50%;}
+}
+@keyframes setterOffence6
+{
+    30% {left:42%; top:50%;}
+    70% {left:42%; top:50%;}
+    100% {left:65%; top:50%;}
+}
+
+div.outsideOneOffence6 {
+    -webkit-animation:outsideOneOffence6 5s; /* Safari and Chrome */
+    animation:outsideOneOffence6 5s; /* Safari and Chrome */
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+@-webkit-keyframes outsideOneOffence6 /* Safari and Chrome */
+{
+    30% {background:#cc0000; left:65%; top:90%;}
+    70% {background:#cc0000; left:65%; top:90%;}
+    100% {left:20%; top:50%;}
+}
+@keyframes outsideOneOffence6
+{
+    30% {background:#cc0000; left:65%; top:90%;}
+    70% {background:#cc0000; left:65%; top:90%;}
+    100% {left:20%; top:50%;}
+}
+
+div.middleOneOffence6 {
+    -webkit-animation:middleOneOffence6 5s; /* Safari and Chrome */
+    animation:middleOneOffence6 5s; /* Safari and Chrome */
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+@-webkit-keyframes middleOneOffence6 /* Safari and Chrome */
+{
+    30% {left:55%; top:5%;}
+    70% {left:55%; top:5%;}
+    100% {left:42%; top:5%;}
+}
+@keyframes middleOneOffence6
+{
+    30% {left:55%; top:5%;}
+    70% {left:55%; top:5%;}
+    100% {left:42%; top:5%;}
+}
+
+div.oppositeOffence6 {
+    -webkit-animation:oppositeOffence6 5s; /* Safari and Chrome */
+    animation:oppositeOffence6 5s; /* Safari and Chrome */
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+@-webkit-keyframes oppositeOffence6 /* Safari and Chrome */
+{
+    30% {left:42%; top:20%;}
+    70% {left:42%; top:20%;}
+    100% {left:75%; top:5%;}
+}
+@keyframes oppositeOffence6
+{
+    30% {left:42%; top:20%;}
+    70% {left:42%; top:20%;}
+    100% {left:75%; top:5%;}
+}
+
+div.outsideTwoOffence6 {
+    -webkit-animation:outsideTwoOffence6 5s; /* Safari and Chrome */
+    animation:outsideTwoOffence6 5s; /* Safari and Chrome */
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+@-webkit-keyframes outsideTwoOffence6 /* Safari and Chrome */
+{
+    30% {left:30%; top:5%;}
+    70% {left:30%; top:5%;}
+    100% {left:10%; top:5%;}
+}
+@keyframes outsideTwoOffence6
+{
+    30% {left:30%; top:5%;}
+    70% {left:30%; top:5%;}
+    100% {left:10%; top:5%;}
+}
+
+div.middleTwoOffence6 {
+    -webkit-animation:middleTwoOffence6 5s; /* Safari and Chrome */
+    animation:middleTwoOffence6 5s; /* Safari and Chrome */
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+@-webkit-keyframes middleTwoOffence6 /* Safari and Chrome */
+{
+    30% {left:20%; top:80%;}
+    70% {left:20%; top:80%;}
+    100% {left:42%; top:80%;}
+}
+@keyframes middleTwoOffence6
+{
+    30% {left:20%; top:80%;}
+    70% {left:20%; top:80%;}
+    100% {left:42%; top:80%;}
+}
+
+/* -------------------  */
+/* P O S I T I O N   6  -  D E F E N C E */
+div.setterDefence6 {
+    -webkit-animation:setterDefence6 7s; /* Safari and Chrome */
+    animation:setterDefence6 7s; /* Safari and Chrome */
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+@-webkit-keyframes setterDefence6 /* Safari and Chrome */
+{
+    20% {background:#c3c3c3; left:50%; top:15%;}
+    60% {background:#c3c3c3; left:50%; top:15%;}
+    80% {background:#cc0000; left:65%; top:5%;}
+    100% {background:#33b5e5; left:65%; top:50%;}
+}
+@keyframes setterDefence6
+{
+    20% {background:#c3c3c3; left:50%; top:15%;}
+    60% {background:#c3c3c3; left:50%; top:15%;}
+    80% {background:#cc0000; left:65%; top:5%;}
+    100% {background:#33b5e5; left:65%; top:50%;}
+}
+
+div.outsideOneDefence6 {
+    -webkit-animation:outsideOneDefence6 7s; /* Safari and Chrome */
+    animation:outsideOneDefence6 7s; /* Safari and Chrome */
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+@-webkit-keyframes outsideOneDefence6 /* Safari and Chrome */
+{
+    20% {left:65%; top:50%;}
+    60% {left:65%; top:50%;}
+    80% {left:20%; top:50%;}
+    100% {left:20%; top:50%;}
+}
+@keyframes outsideOneDefence6
+{
+    20% {left:65%; top:50%;}
+    60% {left:65%; top:50%;}
+    80% {left:20%; top:50%;}
+    100% {left:20%; top:50%;}
+}
+
+div.middleOneDefence6 {
+    -webkit-animation:middleOneDefence6 7s; /* Safari and Chrome */
+    animation:middleOneDefence6 7s; /* Safari and Chrome */
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+@-webkit-keyframes middleOneDefence6 /* Safari and Chrome */
+{
+    20% {left:70%; top:20%;}
+    60% {left:70%; top:20%;}
+    80% {left:42%; top:25%;}
+    100% {left:42%; top:5%;}
+}
+@keyframes middleOneDefence6
+{
+    20% {left:70%; top:20%;}
+    60% {left:70%; top:20%;}
+    80% {left:42%; top:25%;}
+    100% {left:42%; top:5%;}
+}
+
+div.oppositeDefence6 {
+    -webkit-animation:oppositeDefence6 7s; /* Safari and Chrome */
+    animation:oppositeDefence6 7s; /* Safari and Chrome */
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+@-webkit-keyframes oppositeDefence6 /* Safari and Chrome */
+{
+    20% {left:55%; top:5%;}
+    60% {left:55%; top:5%;}
+    80% {left:75%; top:25%;}
+    100% {left:75%; top:5%;}
+}
+@keyframes oppositeDefence6
+{
+    20% {left:55%; top:5%;}
+    60% {left:55%; top:5%;}
+    80% {left:75%; top:25%;}
+    100% {left:75%; top:5%;}
+}
+
+div.outsideTwoDefence6 {
+    -webkit-animation:outsideTwoDefence6 7s; /* Safari and Chrome */
+    animation:outsideTwoDefence6 7s; /* Safari and Chrome */
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+@-webkit-keyframes outsideTwoDefence6 /* Safari and Chrome */
+{
+    20% {left:20%; top:50%;}
+    60% {left:20%; top:50%;}
+    80% {left:10%; top:25%;}
+    100% {left:10%; top:5%;}
+}
+@keyframes outsideTwoDefence6
+{
+    20% {left:20%; top:50%;}
+    60% {left:20%; top:50%;}
+    80% {left:10%; top:25%;}
+    100% {left:10%; top:5%;}
+}
+
+div.middleTwoDefence6 {
+    -webkit-animation:middleTwoDefence6 7s; /* Safari and Chrome */
+    animation:middleTwoDefence6 7s; /* Safari and Chrome */
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+@-webkit-keyframes middleTwoDefence6 /* Safari and Chrome */
+{
+    20% {left:42%; top:80%;}
+    60% {left:42%; top:80%;}
+    80% {left:42%; top:80%;}
+    100% {left:42%; top:80%;}
+}
+@keyframes middleTwoDefence6
+{
+    20% {left:42%; top:80%;}
+    60% {left:42%; top:80%;}
+    80% {left:42%; top:80%;}
+    100% {left:42%; top:80%;}
+}

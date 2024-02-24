@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="manifest" href="manifest.json">
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="utf-8" http-equiv="encoding">
+    <link rel="icon" href="favicon.png" type="image/png" />
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="animations.css">
+</head>
+<body>
+    <div id="container">
+        <div id="positionSelectorStripe">
+            <div id="pos1" class="position"><img src="p1.png"/></div>
+            <div id="pos6" class="position"><img src="p6.png"/></div>
+            <div id="pos5" class="position"><img src="p5.png"/></div>
+            <div id="pos4" class="position"><img src="p4.png"/></div>
+            <div id="pos3" class="position"><img src="p3.png"/></div>
+            <div id="pos2" class="position"><img src="p2.png"/></div>
+            <div style="clear:left;"/>
+        </div>
+        <div id="contentContainer">
+            <div id="floor">
+                <div id="attack"></div>
+                <div id="setter" class="player">Zuspieler</div>
+                <div id="outsideOne" class="player">Au&szlig;en 1</div>
+                <div id="middleOne" class="player">Mitte 1</div>
+                <div id="opposite" class="player">Diagonal</div>
+                <div id="outsideTwo" class="player">Au&szlig;en 2</div>
+                <div id="middleTwo" class="player">Mitte 2</div>
+            </div>
+        </div>
+        <div id="buttonStripe">
+            <div id="positionsButton" class="buttonPositions">Aufstellung</div>
+            <div id="serviceButton" class="buttonService">Aufschlag</div>
+            <div id="defenceButton" class="buttonDefence">Annahme</div>
+            <div style="float:clear;"/>
+        </div>
+    </div>
+    <script src="move.min.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>

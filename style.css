@@ -12,7 +12,7 @@ html,body {
     height:100%;
 }
 
-#positionSelectorStripe {
+#positionSelectorPanel {
     background:#4c4c4c;
 }
 
@@ -68,7 +68,7 @@ html,body {
     text-align:center;
 }
 
-#buttonStripe {
+#buttonPanel {
     background:#444;
     height:auto;
     position:fixed;
@@ -111,4 +111,12 @@ div.buttonDefence {
     width:33.333%;
     float:left;
     color:white;
+}
+
+.attackPlayerColor {
+    background-color: #98cc00;
+}
+
+.defencePlayerColor {
+    background-color: #33b5e5;
 }

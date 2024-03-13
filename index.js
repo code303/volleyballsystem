@@ -118,6 +118,15 @@ const APP = {
         APP.changeColor(document.getElementById('defenceButton'), '#727272');
         APP.animateDefence();
     },
+
+
+    animateService: function animateService() {
+        console.log("animateService");
+    },
+
+    animateDefence: function animateDefence() {
+        console.log("animateDefence");
+    }   
 };
 
 APP.start();

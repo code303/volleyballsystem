@@ -1,6 +1,8 @@
 const APP = {
 
     currentPosition: 1,
+    DEFENCE_COLOR: "#33b5e5",
+    ATTACK_COLOR: "#98cc00",
 
     start: function start() {
         window.onresize = APP.onResize;
@@ -81,7 +83,6 @@ const APP = {
     highlightCurrentPosition: function highlightCurrentPosition(position) {
         let i;
         for (i = 1; i <= 6; i++) {
-            // const backgroundColor = (i === position) ? '#6c6c6c' : '#4c4c4c';
             const backgroundColor = (i === parseInt(position)) ? '#6c6c6c' : '#4c4c4c';
             document.getElementById("pos" + i).style.background = backgroundColor;
         }
@@ -119,9 +120,42 @@ const APP = {
         APP.animateDefence();
     },
 
+    getWidthOfElement: function getWidthOfElement(elementId) {
+        const element = document.getElementById(elementId);
+        return element.getBoundingClientRect().width;
+    },
+
+    getHeightOfElement: function getHeightOfElement(elementId) {
+        const element = document.getElementById(elementId);
+        return element.getBoundingClientRect().height;
+    },
+
+    convertXPositionFromPercentToPixel: function convertXPositionFromPercentToPixel(positionInPercent) {
+        const containerWidth = APP.getWidthOfElement('floor');
+        return containerWidth * positionInPercent / 100;
+    },
+
+    convertYPositionFromPercentToPixel: function convertYPositionFromPercentToPixel(positionInPercent) {
+        const containerHeight = APP.getHeightOfElement('floor');
+        return containerHeight * positionInPercent / 100;
+    },
+
+    moveElement: function moveElement(elementId, x, y, color) {
+        console.log("moveElement");
+        const element = document.getElementById(elementId);
+        const offsetWidth = element.clientWidth / 2;
+        const offsetHight = element.clientHeight / 2;
+        const newLeft = APP.convertXPositionFromPercentToPixel(x) - offsetWidth;
+        const newTop = APP.convertYPositionFromPercentToPixel(y) - offsetHight;
+        element.style.transform = "translate(" + newLeft + "px, " + newTop + "px)";
+        element.style.backgroundColor = color;
+    },
 
     animateService: function animateService() {
         console.log("animateService");
+        APP.moveElement('setter', 50, 33, APP.DEFENCE_COLOR);
+        APP.moveElement('middleOne', 95, 95, APP.DEFENCE_COLOR);
+        APP.moveElement('middleTwo', 50, 5, APP.ATTACK_COLOR);
     },
 
     animateDefence: function animateDefence() {

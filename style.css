@@ -6,7 +6,8 @@ html,body {
     background-color: #fff;
     color: #000;
     font-family:Verdana;
-    }
+}
+
 #container {
     background:#eeeeee;
     height:100%;
@@ -50,22 +51,27 @@ html,body {
     top: 0px;
     right: 0px;
     left:0px;
+    z-index: -120;
 }
 
 #attack {
     position:relative;
     height: 33.3333%;
     background:#c7dde5;
+    z-index: -100;
 }
 
 /* players -> all child nodes of the floor element (other than the first element (attack zone))*/
-#floor > *:not(:first-child)
+#floor > *:not(:last-child)
 {
     position:absolute;
     padding: 10px;
     box-shadow: 3px 3px 5px #888;
     border-radius: 15px;
     text-align:center;
+    transition: transform 1.5s ease, background-color 4.5s ease;
+    width: min-content; 
+    height: min-content;
 }
 
 #buttonPanel {

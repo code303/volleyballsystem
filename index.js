@@ -38,13 +38,24 @@ const APP = {
             document.getElementById("floor").style.bottom = 0 + "px";
         }
     },
-            
+
+    setTeamIntoPosition: function setTeamIntoPosition(position) {
+        APP.moveElement('setter', 70, 60, APP.DEFENCE_COLOR);
+        APP.moveElement('outsideOne', 30, 60, APP.DEFENCE_COLOR);
+        APP.moveElement('middleOne', 50, 60, APP.DEFENCE_COLOR);
+        APP.moveElement('middleTwo', 50, 20, APP.ATTACK_COLOR);
+        APP.moveElement('outsideTwo', 70, 20, APP.ATTACK_COLOR);
+        APP.moveElement('opposite', 30, 20, APP.ATTACK_COLOR);
+    },
+
     init: function init() {
         APP.readFromLocalStorage();
         APP.highlightCurrentPosition(APP.currentPosition); 
         APP.changeColor(document.getElementById('serviceButton'), 'white');
         APP.changeColor(document.getElementById('positionsButton'), '#727272');
         APP.changeColor(document.getElementById('defenceButton'), 'white');
+        APP.setTeamIntoPosition(APP.currentPosition);
+        console.log('init() -> currentPosition: ' + APP.currentPosition);
     },
 
     // Prompts the user to input the name,
@@ -141,12 +152,9 @@ const APP = {
     },
 
     moveElement: function moveElement(elementId, x, y, color) {
-        console.log("moveElement");
         const element = document.getElementById(elementId);
-        const offsetWidth = element.clientWidth / 2;
-        const offsetHight = element.clientHeight / 2;
-        const newLeft = APP.convertXPositionFromPercentToPixel(x) - offsetWidth;
-        const newTop = APP.convertYPositionFromPercentToPixel(y) - offsetHight;
+        const newLeft = APP.convertXPositionFromPercentToPixel(x) - element.clientWidth / 2;
+        const newTop = APP.convertYPositionFromPercentToPixel(y) - element.clientHeight / 2;
         element.style.transform = "translate(" + newLeft + "px, " + newTop + "px)";
         element.style.backgroundColor = color;
     },
@@ -154,7 +162,7 @@ const APP = {
     animateService: function animateService() {
         console.log("animateService");
         APP.moveElement('setter', 50, 33, APP.DEFENCE_COLOR);
-        APP.moveElement('middleOne', 95, 95, APP.DEFENCE_COLOR);
+        APP.moveElement('middleOne', 95, 105, '#ff2222');
         APP.moveElement('middleTwo', 50, 5, APP.ATTACK_COLOR);
     },
 

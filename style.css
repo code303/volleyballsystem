@@ -13,11 +13,11 @@ html,body {
     height:100%;
 }
 
-#positionSelectorPanel {
+#rotationSelectorPanel {
     background:#4c4c4c;
 }
 
-.position {
+.rotationSelector {
     float:left;
     width:16.66666%;
     box-sizing:border-box;
@@ -54,7 +54,7 @@ html,body {
     z-index: -120;
 }
 
-#attack {
+#attackZone {
     position:relative;
     height: 33.3333%;
     background:#c7dde5;

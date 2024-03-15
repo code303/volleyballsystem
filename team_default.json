@@ -1,0 +1,12 @@
+{
+  "id": "c4a760a9-dbcf-4b0b-9a5a-8f8b9e9e6e8d",
+  "name": "Magic Spikers",
+  "players": [
+    { "id": 1, "role": "setter", "name": ""},
+    { "id": 2, "role": "outside", "name": ""},
+    { "id": 3, "role": "middle", "name": ""},
+    { "id": 4, "role": "powerhitter", "name": ""},
+    { "id": 5, "role": "outside", "name": ""},
+    { "id": 6, "role": "middle", "name": ""}
+  ]
+}

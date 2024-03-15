@@ -1,0 +1,44 @@
+{
+  "teamId": "c4a760a9-dbcf-4b0b-9a5a-8f8b9e9e6e8d",
+  "rotation": [
+    {
+      "frontplayers": ["player2", "player3", "player4"],
+      "lineup": {
+        "position1": {
+          "player": "player1",
+          "location": {"x": 0.6, "y": 0.4}
+        },
+        "position2": {
+          "player": "player2",
+          "location": {"x": 0, "y": 0}
+        },
+        "position3": {
+          "player": "player3",
+          "location": {"x": 0, "y": 0}
+        },
+        "position4": {
+          "player": "player4",
+          "location": {"x": 0, "y": 0}
+        },
+        "position5": {
+          "player": "player5",
+          "location": {"x": 0, "y": 0}
+        },
+        "position6": {
+          "player": "player6",
+          "location": {"x": 0, "y": 0}
+        }
+      },
+      "serve": {
+        "serve": {},
+        "defense": {}
+      },
+      "receive": {
+          "reception": {},
+          "setting": {},
+          "attack": {},
+          "postattack": {}
+      }
+    }
+  ]
+}

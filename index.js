@@ -1,17 +1,18 @@
 const APP = {
 
-    currentPosition: 1,
+    currentRotation: 1,
     DEFENCE_COLOR: "#33b5e5",
     ATTACK_COLOR: "#98cc00",
 
     start: function start() {
         window.onresize = APP.onResize;
         window.onload = APP.onResize;
-        document.getElementById('positionsButton').addEventListener('click', (event) => {APP.init();});
+        document.getElementById('lineupButton').addEventListener('click', (event) => {APP.init();});
         document.getElementById('serviceButton').addEventListener('click', (event) => {APP.startServiceAnimation();});
         document.getElementById('defenceButton').addEventListener('click', (event) => {APP.startDefenceAnimation();});
         APP.registerClickEventsForPositionButtons();
         APP.registerClickEventsForPlayerNames();
+        APP.fetchPositionData();
     },
 
     onResize: function onResize() {
@@ -20,12 +21,12 @@ const APP = {
     },
 
     resizeContentContainer: function resizeContentContainer() {
-        const positionSelectorPanelHeight = document.getElementById("positionSelectorPanel").scrollHeight;
+        const rotationSelectorPanelHeight = document.getElementById("rotationSelectorPanel").scrollHeight;
         const buttonPanelHeight = document.getElementById("buttonPanel").scrollHeight;
-        const screenWidth = document.getElementById("positionSelectorPanel").scrollWidth;
-        const availableHight = document.getElementById("container").scrollHeight - positionSelectorPanelHeight - buttonPanelHeight;
+        const screenWidth = document.getElementById("rotationSelectorPanel").scrollWidth;
+        const availableHight = document.getElementById("container").scrollHeight - rotationSelectorPanelHeight - buttonPanelHeight;
         
-        document.getElementById("contentContainer").style.top = positionSelectorPanelHeight + "px";
+        document.getElementById("contentContainer").style.top = rotationSelectorPanelHeight + "px";
         document.getElementById("contentContainer").style.bottom = buttonPanelHeight + "px";
         
         if(availableHight > screenWidth) {
@@ -40,31 +41,32 @@ const APP = {
     },
 
     setTeamIntoPosition: function setTeamIntoPosition(position) {
-        APP.moveElement('setter', 70, 60, APP.DEFENCE_COLOR);
-        APP.moveElement('outsideOne', 30, 60, APP.DEFENCE_COLOR);
-        APP.moveElement('middleOne', 50, 60, APP.DEFENCE_COLOR);
-        APP.moveElement('middleTwo', 50, 20, APP.ATTACK_COLOR);
-        APP.moveElement('outsideTwo', 70, 20, APP.ATTACK_COLOR);
-        APP.moveElement('opposite', 30, 20, APP.ATTACK_COLOR);
+        APP.moveElement('player1', 70, 60, APP.DEFENCE_COLOR);
+        APP.moveElement('player2', 30, 60, APP.DEFENCE_COLOR);
+        APP.moveElement('player3', 50, 60, APP.DEFENCE_COLOR);
+        APP.moveElement('player4', 50, 20, APP.ATTACK_COLOR);
+        APP.moveElement('player5', 70, 20, APP.ATTACK_COLOR);
+        APP.moveElement('player6', 30, 20, APP.ATTACK_COLOR);
     },
 
     init: function init() {
         APP.readFromLocalStorage();
-        APP.highlightCurrentPosition(APP.currentPosition); 
+        APP.highlightCurrentPosition(APP.currentRotation); 
         APP.changeColor(document.getElementById('serviceButton'), 'white');
-        APP.changeColor(document.getElementById('positionsButton'), '#727272');
+        APP.changeColor(document.getElementById('lineupButton'), '#727272');
         APP.changeColor(document.getElementById('defenceButton'), 'white');
-        APP.setTeamIntoPosition(APP.currentPosition);
-        console.log('init() -> currentPosition: ' + APP.currentPosition);
+        APP.setTeamIntoPosition(APP.currentRotation);
+        console.log('init() -> currentRotation: ' + APP.currentRotation);
     },
 
     // Prompts the user to input the name,
     // adjust the output on screen, save to local storage
-    promptName: function promptName(id, position) {
-        const person = prompt("Gib den Namen des Spielers ein:", "");
-        if (person != null) {
-            document.getElementById(id).innerHTML = "<b>" + person + "</b><br/><small>" + position + "</small>";
-            APP.saveToLocalStorage();
+    promptName: function promptName(id, htmlId, position) {
+        const name = prompt("Gib den Namen des Spielers ein:", "");
+        if (name != null) {
+            document.getElementById(htmlId).innerHTML = "<b>" + name + "</b><br/><small>" + position + "</small>";
+            const player = {id, name, position};
+            APP.savePlayerToLocalStorage(player);
         }
     },
 
@@ -72,61 +74,78 @@ const APP = {
         element.style.color = color;
     },
 
-    saveToLocalStorage: function saveToLocalStorage() {
+    savePositionDataToLocalStorage: function savePositionDataToLocalStorage(data) {
+        this.saveToLocalStorage('positionData', JSON.stringify(data));
+    },
+
+    savePlayerToLocalStorage: function savePlayerToLocalStorage(playerData) {
+        const player = {
+            id: playerData.id,
+            name: playerData.name,
+            position: playerData.position
+        };
+        APP.saveToLocalStorage('player' + player.id, JSON.stringify(player));
+    },
+
+    saveCurrentRotationToLocalStorage: function saveCurrentRotationToLocalStorage(rotation) {
+        APP.saveToLocalStorage('currentRotation', rotation);
+    },
+    
+    saveToLocalStorage: function saveToLocalStorage(key, value) {
         if (typeof(Storage) !== 'undefined') {
-            localStorage.currentPosition = APP.currentPosition;
+            localStorage.setItem(key, value);
         } else {
             alert('Sorry, your browser does not support web storage...');
         }
     },
         
     readFromLocalStorage: function readFromLocalStorage() {
-        APP.currentPosition = typeof localStorage.currentPosition == "undefined" ? 1 : localStorage.currentPosition;
+        APP.currentRotation = typeof localStorage.currentRotation == "undefined" ? 1 : localStorage.currentRotation;
     },
 
     reloadNewPosition: function reloadNewPosition(newPosition) {
-        APP.currentPosition = newPosition;
-        APP.saveToLocalStorage();
+        APP.currentRotation = newPosition;
+        APP.saveCurrentRotationToLocalStorage(APP.currentRotation);
         APP.highlightCurrentPosition(newPosition);
         APP.init();
     },
 
-    highlightCurrentPosition: function highlightCurrentPosition(position) {
+    highlightCurrentPosition: function highlightCurrentPosition(rotation) {
         let i;
         for (i = 1; i <= 6; i++) {
-            const backgroundColor = (i === parseInt(position)) ? '#6c6c6c' : '#4c4c4c';
-            document.getElementById("pos" + i).style.background = backgroundColor;
+            const backgroundColor = (i === parseInt(rotation)) ? '#6c6c6c' : '#4c4c4c';
+            document.getElementById("rot" + i).style.background = backgroundColor;
         }
     },
 
     registerClickEventsForPositionButtons: function registerClickEventsForPositionButtons() {
-        document.getElementById('pos1').addEventListener('click', (event) => {APP.reloadNewPosition(1);});
-        document.getElementById('pos2').addEventListener('click', (event) => {APP.reloadNewPosition(2);});
-        document.getElementById('pos3').addEventListener('click', (event) => {APP.reloadNewPosition(3);});
-        document.getElementById('pos4').addEventListener('click', (event) => {APP.reloadNewPosition(4);});
-        document.getElementById('pos5').addEventListener('click', (event) => {APP.reloadNewPosition(5);});
-        document.getElementById('pos6').addEventListener('click', (event) => {APP.reloadNewPosition(6);});
+        document.getElementById('rot1').addEventListener('click', (event) => {APP.reloadNewPosition(1);});
+        document.getElementById('rot2').addEventListener('click', (event) => {APP.reloadNewPosition(2);});
+        document.getElementById('rot3').addEventListener('click', (event) => {APP.reloadNewPosition(3);});
+        document.getElementById('rot4').addEventListener('click', (event) => {APP.reloadNewPosition(4);});
+        document.getElementById('rot5').addEventListener('click', (event) => {APP.reloadNewPosition(5);});
+        document.getElementById('rot6').addEventListener('click', (event) => {APP.reloadNewPosition(6);});
     },
 
     registerClickEventsForPlayerNames: function registerClickEventsForPlayerNames() {
-        document.getElementById('setter').addEventListener('click', (event) => {APP.promptName('setter','Zuspieler');});
-        document.getElementById('outsideOne').addEventListener('click', (event) => {APP.promptName('outsideOne','Au&szlig;en 1');});
-        document.getElementById('middleOne').addEventListener('click', (event) => {APP.promptName('middleOne', 'Mitte 1')});
-        document.getElementById('opposite').addEventListener('click', (event) => {APP.promptName('opposite','Diagonal');});
-        document.getElementById('outsideTwo').addEventListener('click', (event) => {APP.promptName('outsideTwo','Au&szlig;en 2');});
-        document.getElementById('middleTwo').addEventListener('click', (event) => {APP.promptName('middleTwo','Mitte 2');});
+        document.getElementById('player1').addEventListener('click', (event) => {APP.promptName(1,'player1','Zuspieler');});
+        document.getElementById('player2').addEventListener('click', (event) => {APP.promptName(2, 'player2','Au&szlig;en 1');});
+        document.getElementById('player3').addEventListener('click', (event) => {APP.promptName(3, 'player3', 'Mitte 1')});
+        document.getElementById('player4').addEventListener('click', (event) => {APP.promptName(4, 'player4','Diagonal');});
+        document.getElementById('player5').addEventListener('click', (event) => {APP.promptName(5, 'player5','Au&szlig;en 2');});
+        document.getElementById('player6').addEventListener('click', (event) => {APP.promptName(6, 'player6','Mitte 2');});
     },
 
     startServiceAnimation: function startServiceAnimation() {
         APP.changeColor(document.getElementById('serviceButton'), '#727272');
-        APP.changeColor(document.getElementById('positionsButton'), 'white');
+        APP.changeColor(document.getElementById('lineupButton'), 'white');
         APP.changeColor(document.getElementById('defenceButton'), 'white');
         APP.animateService();
     },
 
     startDefenceAnimation: function startDefenceAnimation() {
         APP.changeColor(document.getElementById('serviceButton'), 'white');
-        APP.changeColor(document.getElementById('positionsButton'), 'white');
+        APP.changeColor(document.getElementById('lineupButton'), 'white');
         APP.changeColor(document.getElementById('defenceButton'), '#727272');
         APP.animateDefence();
     },
@@ -161,14 +180,27 @@ const APP = {
 
     animateService: function animateService() {
         console.log("animateService");
-        APP.moveElement('setter', 50, 33, APP.DEFENCE_COLOR);
-        APP.moveElement('middleOne', 95, 105, '#ff2222');
-        APP.moveElement('middleTwo', 50, 5, APP.ATTACK_COLOR);
+        APP.moveElement('player1', 50, 33, APP.DEFENCE_COLOR);
+        APP.moveElement('player3', 95, 105, '#ff2222');
+        APP.moveElement('player6', 50, 5, APP.ATTACK_COLOR);
     },
 
     animateDefence: function animateDefence() {
         console.log("animateDefence");
-    }   
+    },
+    
+    fetchPositionData: function fetchPositionData() {
+        const url = './positions_team_default.json';
+        fetch(url)
+        .then((resp) => resp.json())
+        .then(function(data) {
+            console.log(data);
+            APP.savePositionDataToLocalStorage(data);
+        })
+        .catch(function(error) {
+            console.log('Fetching JSON data failed. ' + error);
+        });
+    }
 };
 
 APP.start();

@@ -21,12 +21,13 @@ const APP = {
     },
 
     resizeContentContainer: function resizeContentContainer() {
+        const headerPanelHeight = document.getElementById('header').scrollHeight;
         const rotationSelectorPanelHeight = document.getElementById('rotationSelectorPanel').scrollHeight;
         const buttonPanelHeight = document.getElementById('buttonPanel').scrollHeight;
         const screenWidth = document.getElementById('rotationSelectorPanel').scrollWidth;
         const availableHight = document.getElementById('container').scrollHeight - rotationSelectorPanelHeight - buttonPanelHeight;
         
-        document.getElementById('contentContainer').style.top = rotationSelectorPanelHeight + 'px';
+        document.getElementById('contentContainer').style.top = (headerPanelHeight + rotationSelectorPanelHeight) + 'px';
         document.getElementById('contentContainer').style.bottom = buttonPanelHeight + 'px';
         
         if(availableHight > screenWidth) {

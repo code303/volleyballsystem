@@ -1,6 +1,7 @@
 const APP = {
 
     currentRotation: 'rotation1',
+    positionData: {},
     DEFENCE_COLOR: '#33b5e5',
     ATTACK_COLOR: '#98cc00',
 
@@ -41,13 +42,16 @@ const APP = {
         }
     },
 
-    setTeamIntoPosition: function setTeamIntoPosition(position) {
-        APP.moveElement('player1', 70, 60, APP.DEFENCE_COLOR);
-        APP.moveElement('player2', 30, 60, APP.DEFENCE_COLOR);
-        APP.moveElement('player3', 50, 60, APP.DEFENCE_COLOR);
-        APP.moveElement('player4', 50, 20, APP.ATTACK_COLOR);
-        APP.moveElement('player5', 70, 20, APP.ATTACK_COLOR);
-        APP.moveElement('player6', 30, 20, APP.ATTACK_COLOR);
+    setTeamIntoPosition: function setTeamIntoPosition(rotation) {
+        if (APP.positionData && APP.positionData[rotation]) {
+            const lineup = APP.positionData[rotation].lineup;
+            APP.moveElement('player'+ lineup.position1.playerId, lineup.position1.x, lineup.position1.y, lineup.position1.color);
+            APP.moveElement('player'+ lineup.position2.playerId, lineup.position2.x, lineup.position2.y, lineup.position2.color);
+            APP.moveElement('player'+ lineup.position3.playerId, lineup.position3.x, lineup.position3.y, lineup.position3.color);
+            APP.moveElement('player'+ lineup.position4.playerId, lineup.position4.x, lineup.position4.y, lineup.position4.color);
+            APP.moveElement('player'+ lineup.position5.playerId, lineup.position5.x, lineup.position5.y, lineup.position5.color);
+            APP.moveElement('player'+ lineup.position6.playerId, lineup.position6.x, lineup.position6.y, lineup.position6.color);
+        };
     },
 
     init: function init() {
@@ -102,6 +106,7 @@ const APP = {
         
     readFromLocalStorage: function readFromLocalStorage() {
         APP.currentRotation = typeof localStorage.currentRotation == 'undefined' ? 'rotation1' : localStorage.currentRotation;
+        APP.positionData = typeof localStorage.positionData == 'undefined' ? {} : JSON.parse(localStorage.positionData);
     },
 
     reloadNewPosition: function reloadNewPosition(newRotation) {

@@ -3,11 +3,11 @@
   "rotation1": {
     "lineup": {
       "position1": {"playerId": 1, "x": 70, "y": 60, "color": "#33b5e5"},
-      "position2": {"playerId": 2, "x": 30, "y": 60, "color": "#98cc00"},
-      "position3": {"playerId": 3, "x": 50, "y": 60, "color": "#98cc00"},
-      "position4": {"playerId": 4, "x": 50, "y": 20, "color": "#98cc00"},
-      "position5": {"playerId": 5, "x": 70, "y": 20, "color": "#33b5e5"},
-      "position6": {"playerId": 6, "x": 30, "y": 20, "color": "#33b5e5"}
+      "position2": {"playerId": 2, "x": 70, "y": 20, "color": "#98cc00"},
+      "position3": {"playerId": 3, "x": 50, "y": 20, "color": "#98cc00"},
+      "position4": {"playerId": 4, "x": 30, "y": 20, "color": "#98cc00"},
+      "position5": {"playerId": 5, "x": 30, "y": 60, "color": "#33b5e5"},
+      "position6": {"playerId": 6, "x": 50, "y": 60, "color": "#33b5e5"}
     },
     "serve": {
       "steps": [
@@ -71,5 +71,60 @@
         }
       ]
     }
+  },
+    "rotation2": {
+    "lineup": {
+      "position1": {"playerId": 1, "x": 70, "y": 20, "color": "#98cc00"},
+      "position2": {"playerId": 2, "x": 50, "y": 20, "color": "#98cc00"},
+      "position3": {"playerId": 3, "x": 30, "y": 20, "color": "#98cc00"},
+      "position4": {"playerId": 4, "x": 30, "y": 60, "color": "#33b5e5"},
+      "position5": {"playerId": 5, "x": 50, "y": 60, "color": "#33b5e5"},
+      "position6": {"playerId": 6, "x": 70, "y": 60, "color": "#33b5e5"}
+    },
+    "serve": {}
+  },
+    "rotation3": {
+    "lineup": {
+      "position1": {"playerId": 1, "x": 50, "y": 20, "color": "#98cc00"},
+      "position2": {"playerId": 2, "x": 30, "y": 20, "color": "#98cc00"},
+      "position3": {"playerId": 3, "x": 30, "y": 60, "color": "#33b5e5"},
+      "position4": {"playerId": 4, "x": 50, "y": 60, "color": "#33b5e5"},
+      "position5": {"playerId": 5, "x": 70, "y": 60, "color": "#33b5e5"},
+      "position6": {"playerId": 6, "x": 70, "y": 20, "color": "#98cc00"}
+    },
+    "serve": {}
+  },
+    "rotation4": {
+    "lineup": {
+      "position1": {"playerId": 1, "x": 30, "y": 20, "color": "#98cc00"},
+      "position2": {"playerId": 2, "x": 30, "y": 60, "color": "#33b5e5"},
+      "position3": {"playerId": 3, "x": 50, "y": 60, "color": "#33b5e5"},
+      "position4": {"playerId": 4, "x": 70, "y": 60, "color": "#33b5e5"},
+      "position5": {"playerId": 5, "x": 70, "y": 20, "color": "#98cc00"},
+      "position6": {"playerId": 6, "x": 50, "y": 20, "color": "#98cc00"}
+    },
+    "serve": {}
+  },
+    "rotation5": {
+    "lineup": {
+      "position1": {"playerId": 1, "x": 30, "y": 60, "color": "#33b5e5"},
+      "position2": {"playerId": 2, "x": 50, "y": 60, "color": "#33b5e5"},
+      "position3": {"playerId": 3, "x": 70, "y": 60, "color": "#33b5e5"},
+      "position4": {"playerId": 4, "x": 70, "y": 20, "color": "#98cc00"},
+      "position5": {"playerId": 5, "x": 50, "y": 20, "color": "#98cc00"},
+      "position6": {"playerId": 6, "x": 30, "y": 20, "color": "#98cc00"}
+    },
+    "serve": {}
+  },
+    "rotation6": {
+    "lineup": {
+      "position1": {"playerId": 1, "x": 50, "y": 60, "color": "#33b5e5"},
+      "position2": {"playerId": 2, "x": 70, "y": 60, "color": "#33b5e5"},
+      "position3": {"playerId": 3, "x": 70, "y": 20, "color": "#98cc00"},
+      "position4": {"playerId": 4, "x": 50, "y": 20, "color": "#98cc00"},
+      "position5": {"playerId": 5, "x": 30, "y": 20, "color": "#98cc00"},
+      "position6": {"playerId": 6, "x": 30, "y": 60, "color": "#33b5e5"}
+    },
+    "serve": {}
   }
 }

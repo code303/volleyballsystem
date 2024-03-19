@@ -42,15 +42,15 @@ const APP = {
         }
     },
 
-    setTeamIntoPosition: function setTeamIntoPosition(rotation) {
+    lineupTeam: function lineupTeam(rotation) {
         if (APP.positionData && APP.positionData[rotation]) {
             const lineup = APP.positionData[rotation].lineup;
-            APP.moveElement('player'+ lineup.position1.playerId, lineup.position1.x, lineup.position1.y, lineup.position1.color);
-            APP.moveElement('player'+ lineup.position2.playerId, lineup.position2.x, lineup.position2.y, lineup.position2.color);
-            APP.moveElement('player'+ lineup.position3.playerId, lineup.position3.x, lineup.position3.y, lineup.position3.color);
-            APP.moveElement('player'+ lineup.position4.playerId, lineup.position4.x, lineup.position4.y, lineup.position4.color);
-            APP.moveElement('player'+ lineup.position5.playerId, lineup.position5.x, lineup.position5.y, lineup.position5.color);
-            APP.moveElement('player'+ lineup.position6.playerId, lineup.position6.x, lineup.position6.y, lineup.position6.color);
+            for (let i = 1; i <= 6; i++) {
+                const x = lineup['position'+i].x;
+                const y = lineup['position'+i].y;
+                const color = lineup['position'+i].color;
+                APP.moveElement('player'+ i, x, y, color); 
+            }
         };
     },
 
@@ -60,7 +60,7 @@ const APP = {
         APP.changeColor(document.getElementById('serviceButton'), 'white');
         APP.changeColor(document.getElementById('lineupButton'), '#727272');
         APP.changeColor(document.getElementById('defenceButton'), 'white');
-        APP.setTeamIntoPosition(APP.currentRotation);
+        APP.lineupTeam(APP.currentRotation);
         console.log('init() -> currentRotation: ' + APP.currentRotation);
     },
 

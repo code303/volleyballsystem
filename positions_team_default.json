@@ -1,33 +1,42 @@
 {
   "teamId": "c4a760a9-dbcf-4b0b-9a5a-8f8b9e9e6e8d",
+  "teamName": "Magic Spikers",
+  "players": [
+    {"id": 1, "name": "", "role": "Zuspieler"},
+    {"id": 2, "name": "", "role": "Au&szlig;en"},
+    {"id": 3, "name": "", "role": "Mitte"},
+    {"id": 4, "name": "", "role": "Diagonal"},
+    {"id": 5, "name": "", "role": "Au&szlig;en"},
+    {"id": 6, "name": "", "role": "Mittelblocker"}
+  ],
   "rotation1": {
     "lineup": {
-      "position1": {"playerId": 1, "x": 70, "y": 60, "color": "#33b5e5"},
-      "position2": {"playerId": 2, "x": 70, "y": 20, "color": "#98cc00"},
-      "position3": {"playerId": 3, "x": 50, "y": 20, "color": "#98cc00"},
-      "position4": {"playerId": 4, "x": 30, "y": 20, "color": "#98cc00"},
-      "position5": {"playerId": 5, "x": 30, "y": 60, "color": "#33b5e5"},
-      "position6": {"playerId": 6, "x": 50, "y": 60, "color": "#33b5e5"}
+      "player1": {"playerId": 1, "x": 70, "y": 60, "color": "#33b5e5"},
+      "player2": {"playerId": 2, "x": 70, "y": 20, "color": "#98cc00"},
+      "player3": {"playerId": 3, "x": 50, "y": 20, "color": "#98cc00"},
+      "player4": {"playerId": 4, "x": 30, "y": 20, "color": "#98cc00"},
+      "player5": {"playerId": 5, "x": 30, "y": 60, "color": "#33b5e5"},
+      "player6": {"playerId": 6, "x": 50, "y": 60, "color": "#33b5e5"}
     },
     "serve": {
       "steps": [
         {
           "description": "Aufschlag",
-          "position1": {"playerId": 1, "x": 90, "y": 100, "color": "#ff2222"},
-          "position2": {"playerId": 2, "x": 30, "y": 60, "color": "#98cc00"},
-          "position3": {"playerId": 3, "x": 50, "y": 60, "color": "#98cc00"},
-          "position4": {"playerId": 4, "x": 50, "y": 20, "color": "#98cc00"},
-          "position5": {"playerId": 5, "x": 70, "y": 20, "color": "#33b5e5"},
-          "position6": {"playerId": 6, "x": 30, "y": 20, "color": "#33b5e5"}
+          "player1": {"playerId": 1, "x": 90, "y": 100, "color": "#ff2222"},
+          "player2": {"playerId": 2, "x": 30, "y": 60, "color": "#98cc00"},
+          "player3": {"playerId": 3, "x": 50, "y": 60, "color": "#98cc00"},
+          "player4": {"playerId": 4, "x": 50, "y": 20, "color": "#98cc00"},
+          "player5": {"playerId": 5, "x": 70, "y": 20, "color": "#33b5e5"},
+          "player6": {"playerId": 6, "x": 30, "y": 20, "color": "#33b5e5"}
         },
         {
           "description": "Abwehr",
-          "position1": {"playerId": 1, "x": 90, "y": 10, "color": "#33b5e5"},
-          "position2": {"playerId": 2, "x": 30, "y": 60, "color": "#98cc00"},
-          "position3": {"playerId": 3, "x": 50, "y": 60, "color": "#98cc00"},
-          "position4": {"playerId": 4, "x": 50, "y": 20, "color": "#98cc00"},
-          "position5": {"playerId": 5, "x": 70, "y": 20, "color": "#33b5e5"},
-          "position6": {"playerId": 6, "x": 30, "y": 20, "color": "#33b5e5"}
+          "player1": {"playerId": 1, "x": 90, "y": 10, "color": "#33b5e5"},
+          "player2": {"playerId": 2, "x": 30, "y": 60, "color": "#98cc00"},
+          "player3": {"playerId": 3, "x": 50, "y": 60, "color": "#98cc00"},
+          "player4": {"playerId": 4, "x": 50, "y": 20, "color": "#98cc00"},
+          "player5": {"playerId": 5, "x": 70, "y": 20, "color": "#33b5e5"},
+          "player6": {"playerId": 6, "x": 30, "y": 20, "color": "#33b5e5"}
         }
       ]
     },
@@ -35,95 +44,95 @@
       "steps": [
         {
           "description": "Annahme",
-          "position1": {"playerId": 1, "x": 70, "y": 60, "color": "#33b5e5"},
-          "position2": {"playerId": 2, "x": 30, "y": 60, "color": "#98cc00"},
-          "position3": {"playerId": 3, "x": 50, "y": 60, "color": "#98cc00"},
-          "position4": {"playerId": 4, "x": 50, "y": 20, "color": "#98cc00"},
-          "position5": {"playerId": 5, "x": 70, "y": 20, "color": "#33b5e5"},
-          "position6": {"playerId": 6, "x": 30, "y": 20, "color": "#33b5e5"}
+          "player1": {"playerId": 1, "x": 70, "y": 60, "color": "#33b5e5"},
+          "player2": {"playerId": 2, "x": 30, "y": 60, "color": "#98cc00"},
+          "player3": {"playerId": 3, "x": 50, "y": 60, "color": "#98cc00"},
+          "player4": {"playerId": 4, "x": 50, "y": 20, "color": "#98cc00"},
+          "player5": {"playerId": 5, "x": 70, "y": 20, "color": "#33b5e5"},
+          "player6": {"playerId": 6, "x": 30, "y": 20, "color": "#33b5e5"}
         },
         {
           "description": "Zuspiel",
-          "position1": {"playerId": 1, "x": 70, "y": 60, "color": "#33b5e5"},
-          "position2": {"playerId": 2, "x": 30, "y": 60, "color": "#98cc00"},
-          "position3": {"playerId": 3, "x": 50, "y": 60, "color": "#98cc00"},
-          "position4": {"playerId": 4, "x": 50, "y": 20, "color": "#98cc00"},
-          "position5": {"playerId": 5, "x": 70, "y": 20, "color": "#33b5e5"},
-          "position6": {"playerId": 6, "x": 30, "y": 20, "color": "#33b5e5"}
+          "player1": {"playerId": 1, "x": 70, "y": 60, "color": "#33b5e5"},
+          "player2": {"playerId": 2, "x": 30, "y": 60, "color": "#98cc00"},
+          "player3": {"playerId": 3, "x": 50, "y": 60, "color": "#98cc00"},
+          "player4": {"playerId": 4, "x": 50, "y": 20, "color": "#98cc00"},
+          "player5": {"playerId": 5, "x": 70, "y": 20, "color": "#33b5e5"},
+          "player6": {"playerId": 6, "x": 30, "y": 20, "color": "#33b5e5"}
         },
         {
           "description": "Angriff",
-          "position1": {"playerId": 1, "x": 70, "y": 60, "color": "#33b5e5"},
-          "position2": {"playerId": 2, "x": 30, "y": 60, "color": "#98cc00"},
-          "position3": {"playerId": 3, "x": 50, "y": 60, "color": "#98cc00"},
-          "position4": {"playerId": 4, "x": 50, "y": 20, "color": "#98cc00"},
-          "position5": {"playerId": 5, "x": 70, "y": 20, "color": "#33b5e5"},
-          "position6": {"playerId": 6, "x": 30, "y": 20, "color": "#33b5e5"}
+          "player1": {"playerId": 1, "x": 70, "y": 60, "color": "#33b5e5"},
+          "player2": {"playerId": 2, "x": 30, "y": 60, "color": "#98cc00"},
+          "player3": {"playerId": 3, "x": 50, "y": 60, "color": "#98cc00"},
+          "player4": {"playerId": 4, "x": 50, "y": 20, "color": "#98cc00"},
+          "player5": {"playerId": 5, "x": 70, "y": 20, "color": "#33b5e5"},
+          "player6": {"playerId": 6, "x": 30, "y": 20, "color": "#33b5e5"}
         },
         {
           "description": "Verteidigung",
-          "position1": {"playerId": 1, "x": 70, "y": 60, "color": "#33b5e5"},
-          "position2": {"playerId": 2, "x": 30, "y": 60, "color": "#98cc00"},
-          "position3": {"playerId": 3, "x": 50, "y": 60, "color": "#98cc00"},
-          "position4": {"playerId": 4, "x": 50, "y": 20, "color": "#98cc00"},
-          "position5": {"playerId": 5, "x": 70, "y": 20, "color": "#33b5e5"},
-          "position6": {"playerId": 6, "x": 30, "y": 20, "color": "#33b5e5"}
+          "player1": {"playerId": 1, "x": 70, "y": 60, "color": "#33b5e5"},
+          "player2": {"playerId": 2, "x": 30, "y": 60, "color": "#98cc00"},
+          "player3": {"playerId": 3, "x": 50, "y": 60, "color": "#98cc00"},
+          "player4": {"playerId": 4, "x": 50, "y": 20, "color": "#98cc00"},
+          "player5": {"playerId": 5, "x": 70, "y": 20, "color": "#33b5e5"},
+          "player6": {"playerId": 6, "x": 30, "y": 20, "color": "#33b5e5"}
         }
       ]
     }
   },
     "rotation2": {
     "lineup": {
-      "position1": {"playerId": 1, "x": 70, "y": 20, "color": "#98cc00"},
-      "position2": {"playerId": 2, "x": 50, "y": 20, "color": "#98cc00"},
-      "position3": {"playerId": 3, "x": 30, "y": 20, "color": "#98cc00"},
-      "position4": {"playerId": 4, "x": 30, "y": 60, "color": "#33b5e5"},
-      "position5": {"playerId": 5, "x": 50, "y": 60, "color": "#33b5e5"},
-      "position6": {"playerId": 6, "x": 70, "y": 60, "color": "#33b5e5"}
+      "player1": {"playerId": 1, "x": 70, "y": 20, "color": "#98cc00"},
+      "player2": {"playerId": 2, "x": 50, "y": 20, "color": "#98cc00"},
+      "player3": {"playerId": 3, "x": 30, "y": 20, "color": "#98cc00"},
+      "player4": {"playerId": 4, "x": 30, "y": 60, "color": "#33b5e5"},
+      "player5": {"playerId": 5, "x": 50, "y": 60, "color": "#33b5e5"},
+      "player6": {"playerId": 6, "x": 70, "y": 60, "color": "#33b5e5"}
     },
     "serve": {}
   },
     "rotation3": {
     "lineup": {
-      "position1": {"playerId": 1, "x": 50, "y": 20, "color": "#98cc00"},
-      "position2": {"playerId": 2, "x": 30, "y": 20, "color": "#98cc00"},
-      "position3": {"playerId": 3, "x": 30, "y": 60, "color": "#33b5e5"},
-      "position4": {"playerId": 4, "x": 50, "y": 60, "color": "#33b5e5"},
-      "position5": {"playerId": 5, "x": 70, "y": 60, "color": "#33b5e5"},
-      "position6": {"playerId": 6, "x": 70, "y": 20, "color": "#98cc00"}
+      "player1": {"playerId": 1, "x": 50, "y": 20, "color": "#98cc00"},
+      "player2": {"playerId": 2, "x": 30, "y": 20, "color": "#98cc00"},
+      "player3": {"playerId": 3, "x": 30, "y": 60, "color": "#33b5e5"},
+      "player4": {"playerId": 4, "x": 50, "y": 60, "color": "#33b5e5"},
+      "player5": {"playerId": 5, "x": 70, "y": 60, "color": "#33b5e5"},
+      "player6": {"playerId": 6, "x": 70, "y": 20, "color": "#98cc00"}
     },
     "serve": {}
   },
     "rotation4": {
     "lineup": {
-      "position1": {"playerId": 1, "x": 30, "y": 20, "color": "#98cc00"},
-      "position2": {"playerId": 2, "x": 30, "y": 60, "color": "#33b5e5"},
-      "position3": {"playerId": 3, "x": 50, "y": 60, "color": "#33b5e5"},
-      "position4": {"playerId": 4, "x": 70, "y": 60, "color": "#33b5e5"},
-      "position5": {"playerId": 5, "x": 70, "y": 20, "color": "#98cc00"},
-      "position6": {"playerId": 6, "x": 50, "y": 20, "color": "#98cc00"}
+      "player1": {"playerId": 1, "x": 30, "y": 20, "color": "#98cc00"},
+      "player2": {"playerId": 2, "x": 30, "y": 60, "color": "#33b5e5"},
+      "player3": {"playerId": 3, "x": 50, "y": 60, "color": "#33b5e5"},
+      "player4": {"playerId": 4, "x": 70, "y": 60, "color": "#33b5e5"},
+      "player5": {"playerId": 5, "x": 70, "y": 20, "color": "#98cc00"},
+      "player6": {"playerId": 6, "x": 50, "y": 20, "color": "#98cc00"}
     },
     "serve": {}
   },
     "rotation5": {
     "lineup": {
-      "position1": {"playerId": 1, "x": 30, "y": 60, "color": "#33b5e5"},
-      "position2": {"playerId": 2, "x": 50, "y": 60, "color": "#33b5e5"},
-      "position3": {"playerId": 3, "x": 70, "y": 60, "color": "#33b5e5"},
-      "position4": {"playerId": 4, "x": 70, "y": 20, "color": "#98cc00"},
-      "position5": {"playerId": 5, "x": 50, "y": 20, "color": "#98cc00"},
-      "position6": {"playerId": 6, "x": 30, "y": 20, "color": "#98cc00"}
+      "player1": {"playerId": 1, "x": 30, "y": 60, "color": "#33b5e5"},
+      "player2": {"playerId": 2, "x": 50, "y": 60, "color": "#33b5e5"},
+      "player3": {"playerId": 3, "x": 70, "y": 60, "color": "#33b5e5"},
+      "player4": {"playerId": 4, "x": 70, "y": 20, "color": "#98cc00"},
+      "player5": {"playerId": 5, "x": 50, "y": 20, "color": "#98cc00"},
+      "player6": {"playerId": 6, "x": 30, "y": 20, "color": "#98cc00"}
     },
     "serve": {}
   },
     "rotation6": {
     "lineup": {
-      "position1": {"playerId": 1, "x": 50, "y": 60, "color": "#33b5e5"},
-      "position2": {"playerId": 2, "x": 70, "y": 60, "color": "#33b5e5"},
-      "position3": {"playerId": 3, "x": 70, "y": 20, "color": "#98cc00"},
-      "position4": {"playerId": 4, "x": 50, "y": 20, "color": "#98cc00"},
-      "position5": {"playerId": 5, "x": 30, "y": 20, "color": "#98cc00"},
-      "position6": {"playerId": 6, "x": 30, "y": 60, "color": "#33b5e5"}
+      "player1": {"playerId": 1, "x": 50, "y": 60, "color": "#33b5e5"},
+      "player2": {"playerId": 2, "x": 70, "y": 60, "color": "#33b5e5"},
+      "player3": {"playerId": 3, "x": 70, "y": 20, "color": "#98cc00"},
+      "player4": {"playerId": 4, "x": 50, "y": 20, "color": "#98cc00"},
+      "player5": {"playerId": 5, "x": 30, "y": 20, "color": "#98cc00"},
+      "player6": {"playerId": 6, "x": 30, "y": 60, "color": "#33b5e5"}
     },
     "serve": {}
   }

@@ -46,9 +46,9 @@ const APP = {
         if (APP.positionData && APP.positionData[rotation]) {
             const lineup = APP.positionData[rotation].lineup;
             for (let i = 1; i <= 6; i++) {
-                const x = lineup['position'+i].x;
-                const y = lineup['position'+i].y;
-                const color = lineup['position'+i].color;
+                const x = lineup['player' + i].x;
+                const y = lineup['player' + i].y;
+                const color = lineup['player' + i].color;
                 APP.moveElement('player'+ i, x, y, color); 
             }
         };

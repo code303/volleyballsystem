@@ -80,7 +80,7 @@ html,body {
     box-shadow: 3px 3px 5px #888;
     border-radius: 15px;
     text-align:center;
-    transition: transform 1.5s ease, background-color 4.5s ease;
+    transition: transform 1.5s ease, background-color 1.5s ease;
     width: min-content; 
     height: min-content;
 }

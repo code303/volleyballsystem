@@ -1,7 +1,7 @@
 const APP = {
 
     currentRotation: 'rotation1',
-    positionData: {},
+    teamData: {},
     DEFENCE_COLOR: '#33b5e5',
     ATTACK_COLOR: '#98cc00',
 
@@ -43,15 +43,22 @@ const APP = {
     },
 
     lineupTeam: function lineupTeam(rotation) {
-        if (APP.positionData && APP.positionData[rotation]) {
-            const lineup = APP.positionData[rotation].lineup;
+        if (APP.teamData && APP.teamData.positions && APP.teamData.positions[rotation]) {
+            const lineup = APP.teamData.positions[rotation].lineup;
             for (let i = 1; i <= 6; i++) {
+                const name = APP.readPlayerNameFromLocalStorage(i);
+                const role = APP.getPlayerRole(i);
+                APP.setPlayerNameAndPosition('player' + i, name, role);
                 const x = lineup['player' + i].x;
                 const y = lineup['player' + i].y;
                 const color = lineup['player' + i].color;
                 APP.moveElement('player'+ i, x, y, color); 
             }
         };
+    },
+
+    getPlayerRole: function getPlayerRole(id) {
+        return APP.teamData.players.find(p => p.id === id).role;
     },
 
     init: function init() {
@@ -66,13 +73,19 @@ const APP = {
 
     // Prompts the user to input the name,
     // adjust the output on screen, save to local storage
-    promptName: function promptName(id, htmlId, position) {
+    promptName: function promptName(id, htmlId) {
         const name = prompt('Gib den Namen des Spielers ein:', '');
         if (name != null) {
-            document.getElementById(htmlId).innerHTML = '<b>' + name + '</b><br/><small>' + position + '</small>';
-            const player = {id, name, position};
+            APP.getPlayerRole(id);
+            APP.setPlayerNameAndPosition(htmlId, name, this.getPlayerRole(id));
+            //document.getElementById(htmlId).innerHTML = '<b>' + name + '</b><br/><small>' + position + '</small>';
+            const player = {id, name};
             APP.savePlayerToLocalStorage(player);
         }
+    },
+
+    setPlayerNameAndPosition: function setPlayerNameAndPosition(htmlId, name, position) {
+            document.getElementById(htmlId).innerHTML = '<b>' + name + '</b><br/><small>' + position + '</small>';
     },
 
     changeColor: function changeColor(element, color) {
@@ -80,16 +93,11 @@ const APP = {
     },
 
     savePositionDataToLocalStorage: function savePositionDataToLocalStorage(data) {
-        this.saveToLocalStorage('positionData', JSON.stringify(data));
+        this.saveToLocalStorage('teamData', JSON.stringify(data));
     },
 
     savePlayerToLocalStorage: function savePlayerToLocalStorage(playerData) {
-        const player = {
-            id: playerData.id,
-            name: playerData.name,
-            position: playerData.position
-        };
-        APP.saveToLocalStorage('player' + player.id, JSON.stringify(player));
+        APP.saveToLocalStorage('player' + playerData.id, playerData.name);
     },
 
     saveCurrentRotationToLocalStorage: function saveCurrentRotationToLocalStorage(rotation) {
@@ -106,7 +114,11 @@ const APP = {
         
     readFromLocalStorage: function readFromLocalStorage() {
         APP.currentRotation = typeof localStorage.currentRotation == 'undefined' ? 'rotation1' : localStorage.currentRotation;
-        APP.positionData = typeof localStorage.positionData == 'undefined' ? {} : JSON.parse(localStorage.positionData);
+        APP.teamData = typeof localStorage.teamData == 'undefined' ? {} : JSON.parse(localStorage.teamData);
+    },
+
+    readPlayerNameFromLocalStorage: function readPlayerNameFromLocalStorage(id) {
+        return typeof localStorage['player' + id] == 'undefined' ? "..." : localStorage['player' + id];
     },
 
     reloadNewPosition: function reloadNewPosition(newRotation) {
@@ -134,12 +146,12 @@ const APP = {
     },
 
     registerClickEventsForPlayerNames: function registerClickEventsForPlayerNames() {
-        document.getElementById('player1').addEventListener('click', (event) => {APP.promptName(1,'player1','Zuspieler');});
-        document.getElementById('player2').addEventListener('click', (event) => {APP.promptName(2, 'player2','Au&szlig;en 1');});
-        document.getElementById('player3').addEventListener('click', (event) => {APP.promptName(3, 'player3', 'Mitte 1')});
-        document.getElementById('player4').addEventListener('click', (event) => {APP.promptName(4, 'player4','Diagonal');});
-        document.getElementById('player5').addEventListener('click', (event) => {APP.promptName(5, 'player5','Au&szlig;en 2');});
-        document.getElementById('player6').addEventListener('click', (event) => {APP.promptName(6, 'player6','Mitte 2');});
+        document.getElementById('player1').addEventListener('click', (event) => {APP.promptName(1, 'player1');});
+        document.getElementById('player2').addEventListener('click', (event) => {APP.promptName(2, 'player2');});
+        document.getElementById('player3').addEventListener('click', (event) => {APP.promptName(3, 'player3');});
+        document.getElementById('player4').addEventListener('click', (event) => {APP.promptName(4, 'player4');});
+        document.getElementById('player5').addEventListener('click', (event) => {APP.promptName(5, 'player5');});
+        document.getElementById('player6').addEventListener('click', (event) => {APP.promptName(6, 'player6');});
     },
 
     startServiceAnimation: function startServiceAnimation() {
@@ -200,13 +212,15 @@ const APP = {
         fetch(url)
         .then((resp) => resp.json())
         .then(function(data) {
-            console.log(data);
+        console.log(data);
             APP.savePositionDataToLocalStorage(data);
+            APP.init();
         })
         .catch(function(error) {
             console.log('Fetching JSON data failed. ' + error);
         });
     }
+
 };
 
 APP.start();

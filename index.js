@@ -1,6 +1,7 @@
 const APP = {
 
     currentRotation: 'rotation1',
+    currentStep: 0,
     teamData: {},
     DEFENCE_COLOR: '#33b5e5',
     ATTACK_COLOR: '#98cc00',
@@ -11,6 +12,7 @@ const APP = {
         document.getElementById('lineupButton').addEventListener('click', (event) => {APP.init();});
         document.getElementById('serviceButton').addEventListener('click', (event) => {APP.startServiceAnimation();});
         document.getElementById('defenceButton').addEventListener('click', (event) => {APP.startDefenceAnimation();});
+        document.getElementById('actionButton').addEventListener('click', (event) => {APP.nextMove();});
         APP.registerClickEventsForPositionButtons();
         APP.registerClickEventsForPlayerNames();
         APP.fetchPositionData();
@@ -68,6 +70,8 @@ const APP = {
         APP.changeColor(document.getElementById('lineupButton'), '#727272');
         APP.changeColor(document.getElementById('defenceButton'), 'white');
         APP.lineupTeam(APP.currentRotation);
+        APP.disableActionButton();
+        APP.currentStep = 0;
         console.log('init() -> currentRotation: ' + APP.currentRotation);
     },
 
@@ -160,7 +164,8 @@ const APP = {
         APP.changeColor(document.getElementById('serviceButton'), '#727272');
         APP.changeColor(document.getElementById('lineupButton'), 'white');
         APP.changeColor(document.getElementById('defenceButton'), 'white');
-        APP.animateService();
+        APP.animateService(0);
+        APP.enableActionButton();
     },
 
     startDefenceAnimation: function startDefenceAnimation() {
@@ -198,11 +203,19 @@ const APP = {
         element.style.backgroundColor = color;
     },
 
-    animateService: function animateService() {
-        console.log('animateService');
+    animateService: function animateService(stepNumber) {
+        console.log('animateService stepNumber: ' + stepNumber);
         APP.moveElement('player1', 50, 33, APP.DEFENCE_COLOR);
-        APP.moveElement('player3', 95, 105, '#ff2222');
+        APP.moveElement('player3', 95, 105 - 10 * stepNumber, '#ff2222');
         APP.moveElement('player6', 50, 5, APP.ATTACK_COLOR);
+        if (stepNumber >= APP.getNumberOfSteps() - 1) {
+            APP.disableActionButton();
+        }
+    },
+
+    getNumberOfSteps: function getNumberOfSteps() {
+        // TODO: read from team data
+        return 2;
     },
 
     animateDefence: function animateDefence() {
@@ -221,6 +234,19 @@ const APP = {
         .catch(function(error) {
             console.log('Fetching JSON data failed. ' + error);
         });
+    },
+
+    nextMove: function nextMove() {
+        APP.currentStep++;
+        APP.animateService(APP.currentStep);
+    },
+
+    disableActionButton: function disableActionButton() {
+        document.getElementById('actionButton').style.display = 'none';
+    },
+
+    enableActionButton: function enableActionButton() {
+        document.getElementById('actionButton').style.display = 'block';
     }
 
 };

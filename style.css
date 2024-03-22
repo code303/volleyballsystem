@@ -168,3 +168,21 @@ div.buttonDefence {
 .hamburger-menu span:nth-child(3) {
  top: 18px;
 }
+
+.floating-action-button {
+    display: none;
+    position:fixed;
+    bottom: 70px;
+    right: 40px;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background-color: #33b5e5;
+    color: #fff;
+    text-align: center;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+    line-height: 56px;
+    cursor: pointer;
+    border: none;
+    font-size: 24px;
+}

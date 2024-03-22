@@ -76,16 +76,18 @@ const APP = {
     promptName: function promptName(id, htmlId) {
         const name = prompt('Gib den Namen des Spielers ein:', '');
         if (name != null) {
-            APP.getPlayerRole(id);
             APP.setPlayerNameAndPosition(htmlId, name, this.getPlayerRole(id));
-            //document.getElementById(htmlId).innerHTML = '<b>' + name + '</b><br/><small>' + position + '</small>';
             const player = {id, name};
             APP.savePlayerToLocalStorage(player);
         }
     },
 
     setPlayerNameAndPosition: function setPlayerNameAndPosition(htmlId, name, position) {
+        if (name === null || name === '') {
+            document.getElementById(htmlId).innerHTML = '<b>' + position + '</b><br/>';;
+        } else {
             document.getElementById(htmlId).innerHTML = '<b>' + name + '</b><br/><small>' + position + '</small>';
+        }
     },
 
     changeColor: function changeColor(element, color) {
@@ -118,7 +120,7 @@ const APP = {
     },
 
     readPlayerNameFromLocalStorage: function readPlayerNameFromLocalStorage(id) {
-        return typeof localStorage['player' + id] == 'undefined' ? "..." : localStorage['player' + id];
+        return typeof localStorage['player' + id] == 'undefined' ? "" : localStorage['player' + id];
     },
 
     reloadNewPosition: function reloadNewPosition(newRotation) {

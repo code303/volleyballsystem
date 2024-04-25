@@ -164,7 +164,7 @@ const APP = {
     startServiceAnimation: function startServiceAnimation() {
         APP.changeColor(document.getElementById('serviceButton'), '#727272');
         APP.changeColor(document.getElementById('lineupButton'), 'white');
-        APP.changeColor(document.getElementById('defenceButton'), 'white');
+        APP.changeColor(document.getElementById('defenceButton'), '#727272');
         APP.enableActionButton();
         APP.currentStep = 0;
         APP.currentAction = 'serve';
@@ -172,7 +172,7 @@ const APP = {
     },
 
     startDefenceAnimation: function startDefenceAnimation() {
-        APP.changeColor(document.getElementById('serviceButton'), 'white');
+        APP.changeColor(document.getElementById('serviceButton'), '#727272');
         APP.changeColor(document.getElementById('lineupButton'), 'white');
         APP.changeColor(document.getElementById('defenceButton'), '#727272');
         APP.enableActionButton();

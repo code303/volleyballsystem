@@ -23,12 +23,12 @@
         "steps": [
           {
             "description": "Aufschlag",
-            "player1": {"playerId": 1, "x": 90, "y": 100, "color": "#ff2222"},
+            "player1": {"playerId": 1, "x": 90, "y": 90, "color": "#ff2222"},
             "player2": {"playerId": 2, "x": 25, "y": 45, "color": "#98cc00"},
             "player3": {"playerId": 3, "x": 50, "y": 45, "color": "#98cc00"},
             "player4": {"playerId": 4, "x": 50, "y": 20, "color": "#98cc00"},
             "player5": {"playerId": 5, "x": 75, "y": 20, "color": "#33b5e5"},
-            "player6": {"playerId": 6, "x": 25, "y": 20, "color": "#33b5e5"}
+            "player6": {"playerId": 6, "x": 50, "y": 75, "color": "#33b5e5"}
           },
           {
             "description": "Abwehr",
@@ -36,7 +36,7 @@
             "player2": {"playerId": 2, "x": 25, "y": 45, "color": "#98cc00"},
             "player3": {"playerId": 3, "x": 50, "y": 45, "color": "#98cc00"},
             "player4": {"playerId": 4, "x": 50, "y": 20, "color": "#98cc00"},
-            "player5": {"playerId": 5, "x": 75, "y": 20, "color": "#33b5e5"},
+            "player5": {"playerId": 5, "x": 75, "y": 45, "color": "#33b5e5"},
             "player6": {"playerId": 6, "x": 25, "y": 20, "color": "#33b5e5"}
           },
           {
@@ -144,7 +144,68 @@
         "player5": {"playerId": 5, "x": 25, "y": 20, "color": "#98cc00"},
         "player6": {"playerId": 6, "x": 25, "y": 45, "color": "#33b5e5"}
       },
-      "serve": {}
+      "serve": {
+        "steps": [
+          {
+            "description": "Aufschlag",
+            "player1": {"playerId": 1, "x": 50, "y": 45, "color": "#33b5e5"},
+            "player2": {"playerId": 2, "x": 90, "y": 90, "color": "#ff2222"},
+            "player3": {"playerId": 3, "x": 65, "y": 10, "color": "#98cc00"},
+            "player4": {"playerId": 4, "x": 50, "y": 20, "color": "#98cc00"},
+            "player5": {"playerId": 5, "x": 35, "y": 10, "color": "#98cc00"},
+            "player6": {"playerId": 6, "x": 25, "y": 75, "color": "#33b5e5"}
+          },
+          {
+            "description": "Abwehr",
+            "player1": {"playerId": 1, "x": 70, "y": 45, "color": "#33b5e5"},
+            "player2": {"playerId": 2, "x": 30, "y": 45, "color": "#33b5e5"},
+            "player3": {"playerId": 3, "x": 50, "y": 10, "color": "#98cc00"},
+            "player4": {"playerId": 4, "x": 80, "y": 10, "color": "#98cc00"},
+            "player5": {"playerId": 5, "x": 20, "y": 10, "color": "#98cc00"},
+            "player6": {"playerId": 6, "x": 50, "y": 75, "color": "#33b5e5"}
+          }
+        ]
+      },
+      "receive": {
+        "steps": [
+          {
+            "description": "Annahme",
+            "player1": {"playerId": 1, "x": 70, "y": 25, "color": "#33b5e5"},
+            "player2": {"playerId": 2, "x": 85, "y": 60, "color": "#33b5e5"},
+            "player3": {"playerId": 3, "x": 50, "y": 10, "color": "#98cc00"},
+            "player4": {"playerId": 4, "x": 80, "y": 10, "color": "#98cc00"},
+            "player5": {"playerId": 5, "x": 15, "y": 60, "color": "#98cc00"},
+            "player6": {"playerId": 6, "x": 50, "y": 75, "color": "#33b5e5"}
+          },
+          {
+            "description": "Zuspiel",
+            "player1": {"playerId": 1, "x": 75, "y": 35, "color": "#33b5e5"},
+            "player2": {"playerId": 2, "x": 25, "y": 35, "color": "#33b5e5"},
+            "player3": {"playerId": 3, "x": 50, "y": 10, "color": "#98cc00"},
+            "player4": {"playerId": 4, "x": 80, "y": 10, "color": "#98cc00"},
+            "player5": {"playerId": 5, "x": 20, "y": 10, "color": "#98cc00"},
+            "player6": {"playerId": 6, "x": 50, "y": 75, "color": "#33b5e5"}
+          },
+          {
+            "description": "Angriff",
+            "player1": {"playerId": 1, "x": 75, "y": 45, "color": "#33b5e5"},
+            "player2": {"playerId": 2, "x": 25, "y": 45, "color": "#33b5e5"},
+            "player3": {"playerId": 3, "x": 50, "y": 10, "color": "#98cc00"},
+            "player4": {"playerId": 4, "x": 80, "y": 10, "color": "#98cc00"},
+            "player5": {"playerId": 5, "x": 20, "y": 10, "color": "#98cc00"},
+            "player6": {"playerId": 6, "x": 50, "y": 75, "color": "#33b5e5"}
+          },
+          {
+            "description": "Verteidigung",
+            "player1": {"playerId": 1, "x": 75, "y": 45, "color": "#33b5e5"},
+            "player2": {"playerId": 2, "x": 25, "y": 45, "color": "#33b5e5"},
+            "player3": {"playerId": 3, "x": 50, "y": 10, "color": "#98cc00"},
+            "player4": {"playerId": 4, "x": 80, "y": 10, "color": "#98cc00"},
+            "player5": {"playerId": 5, "x": 20, "y": 10, "color": "#98cc00"},
+            "player6": {"playerId": 6, "x": 50, "y": 75, "color": "#33b5e5"}
+          }
+        ]
+      }
     }
   }
 }

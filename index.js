@@ -133,6 +133,7 @@ const APP = {
         APP.saveCurrentRotationToLocalStorage(APP.currentRotation);
         APP.highlightCurrentPosition(newRotation);
         APP.init();
+        APP.showDescription('...');
     },
 
     highlightCurrentPosition: function highlightCurrentPosition(rotation) {
@@ -169,6 +170,12 @@ const APP = {
         APP.currentStep = 0;
         APP.currentAction = 'serve';
         APP.animateAction(APP.currentStep, APP.currentAction);
+        APP.showDescription('service');
+    },
+
+    showDescription: function showDescription(description) {
+        const descriptionDiv = document.getElementById('description');
+        descriptionDiv.innerHTML = APP.teamData.positions[APP.currentRotation][APP.currentAction].steps[0]['description'];
     },
 
     startDefenceAnimation: function startDefenceAnimation() {
@@ -179,6 +186,7 @@ const APP = {
         APP.currentStep = 0;
         APP.currentAction = 'receive';
         APP.animateAction(APP.currentStep, APP.currentAction);
+        APP.showDescription('defence');
     },
 
     getWidthOfElement: function getWidthOfElement(elementId) {

@@ -138,8 +138,9 @@ div.buttonDefence {
     background-color: #33b5e5;
 }
 
-#description {
-    background:#dad9d9;
+#floor > #description {
+    background: #dfe9ed;
+    box-shadow: 0 0 0px #888;
     color:#4b4b4b;
     padding: 0.5em;
     text-align: center;

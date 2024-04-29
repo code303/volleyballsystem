@@ -24,10 +24,10 @@
           {
             "description": "Aufschlag",
             "player1": {"playerId": 1, "x": 90, "y": 90, "color": "#ff2222"},
-            "player2": {"playerId": 2, "x": 25, "y": 45, "color": "#98cc00"},
-            "player3": {"playerId": 3, "x": 50, "y": 45, "color": "#98cc00"},
-            "player4": {"playerId": 4, "x": 50, "y": 20, "color": "#98cc00"},
-            "player5": {"playerId": 5, "x": 75, "y": 20, "color": "#33b5e5"},
+            "player2": {"playerId": 2, "x": 65, "y": 20, "color": "#98cc00"},
+            "player3": {"playerId": 3, "x": 50, "y": 10, "color": "#98cc00"},
+            "player4": {"playerId": 4, "x": 35, "y": 20, "color": "#98cc00"},
+            "player5": {"playerId": 5, "x": 25, "y": 45, "color": "#33b5e5"},
             "player6": {"playerId": 6, "x": 50, "y": 75, "color": "#33b5e5"}
           },
           {

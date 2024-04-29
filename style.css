@@ -99,7 +99,7 @@ html,body {
     background-image: linear-gradient(top left, #4c4c4c 80%, #444 100%);
 }
 
-    div.buttonPositions, div.buttonService, div.buttonDefence {
+div.buttonPositions, div.buttonService, div.buttonDefence {
     overflow: auto;
     height: auto !important;
     padding-top: 10px;
@@ -136,6 +136,15 @@ div.buttonDefence {
 
 .defencePlayerColor {
     background-color: #33b5e5;
+}
+
+#description {
+    background:#dad9d9;
+    color:#4b4b4b;
+    padding: 0.5em;
+    text-align: center;
+    font-size: 1.0em;
+    bottom: 0;
 }
 
 .hamburger-menu {

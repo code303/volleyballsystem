@@ -47,6 +47,7 @@ const APP = {
 
     lineupTeam: function lineupTeam(rotation) {
         if (APP.teamData && APP.teamData.positions && APP.teamData.positions[rotation]) {
+            APP.showDescription('lineup');
             const lineup = APP.teamData.positions[rotation].lineup;
             for (let i = 1; i <= 6; i++) {
                 const name = APP.readPlayerNameFromLocalStorage(lineup['player' + i].playerId);
@@ -175,7 +176,12 @@ const APP = {
 
     showDescription: function showDescription(description) {
         const descriptionDiv = document.getElementById('description');
-        descriptionDiv.innerHTML = APP.teamData.positions[APP.currentRotation][APP.currentAction].steps[0]['description'];
+        if (description === 'lineup') {
+            descriptionDiv.innerHTML = APP.teamData.positions[APP.currentRotation].lineup.description;
+            return;
+        } else {
+            descriptionDiv.innerHTML = APP.teamData.positions[APP.currentRotation][APP.currentAction].steps[0]['description'];
+        }
     },
 
     startDefenceAnimation: function startDefenceAnimation() {

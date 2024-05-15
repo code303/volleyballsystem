@@ -134,7 +134,7 @@ const APP = {
         APP.saveCurrentRotationToLocalStorage(APP.currentRotation);
         APP.highlightCurrentPosition(newRotation);
         APP.init();
-        APP.showDescription('...');
+        APP.showDescription('lineup');
     },
 
     highlightCurrentPosition: function highlightCurrentPosition(rotation) {
@@ -171,7 +171,8 @@ const APP = {
         APP.currentStep = 0;
         APP.currentAction = 'serve';
         APP.animateAction(APP.currentStep, APP.currentAction);
-        APP.showDescription('service');
+        const description = APP.teamData.positions[APP.currentRotation][APP.currentAction].steps[0]['description'];
+        APP.showDescription(description);
     },
 
     showDescription: function showDescription(description) {
@@ -180,7 +181,7 @@ const APP = {
             descriptionDiv.innerHTML = APP.teamData.positions[APP.currentRotation].lineup.description;
             return;
         } else {
-            descriptionDiv.innerHTML = APP.teamData.positions[APP.currentRotation][APP.currentAction].steps[0]['description'];
+            descriptionDiv.innerHTML = description;
         }
     },
 
@@ -192,7 +193,8 @@ const APP = {
         APP.currentStep = 0;
         APP.currentAction = 'receive';
         APP.animateAction(APP.currentStep, APP.currentAction);
-        APP.showDescription('defence');
+        const description = APP.teamData.positions[APP.currentRotation][APP.currentAction].steps[0]['description'];
+        APP.showDescription(description);
     },
 
     getWidthOfElement: function getWidthOfElement(elementId) {
@@ -236,6 +238,8 @@ const APP = {
                 const color = nextPositions['player' + i].color;
                 APP.moveElement('player'+ i, x, y, color); 
             }
+            const description = APP.teamData.positions[APP.currentRotation][APP.currentAction].steps[stepNumber]['description'];
+            APP.showDescription(description);
         };
         
         if (stepNumber >= APP.getNumberOfSteps(APP.currentRotation, action) - 1) {

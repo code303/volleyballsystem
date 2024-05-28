@@ -96,16 +96,68 @@
       "serve": {}
     },
       "rotation3": {
-      "lineup": {
-        "description": "Aufstellung",
-        "player1": {"playerId": 1, "x": 50, "y": 20, "color": "#98cc00"},
-        "player2": {"playerId": 2, "x": 25, "y": 20, "color": "#98cc00"},
-        "player3": {"playerId": 3, "x": 25, "y": 45, "color": "#33b5e5"},
-        "player4": {"playerId": 4, "x": 50, "y": 45, "color": "#33b5e5"},
-        "player5": {"playerId": 5, "x": 75, "y": 45, "color": "#33b5e5"},
-        "player6": {"playerId": 6, "x": 75, "y": 20, "color": "#98cc00"}
-      },
-      "serve": {}
+        "lineup": {
+          "description": "Aufstellung",
+          "player1": {"playerId": 1, "x": 50, "y": 20, "color": "#98cc00"},
+          "player2": {"playerId": 2, "x": 25, "y": 20, "color": "#98cc00"},
+          "player3": {"playerId": 3, "x": 25, "y": 45, "color": "#33b5e5"},
+          "player4": {"playerId": 4, "x": 50, "y": 45, "color": "#33b5e5"},
+          "player5": {"playerId": 5, "x": 75, "y": 45, "color": "#33b5e5"},
+          "player6": {"playerId": 6, "x": 75, "y": 20, "color": "#98cc00"}
+        },
+        "serve": {
+          "steps": [
+            {
+              "description": "Aufschlag",
+              "player1": {"playerId": 1, "x": 50, "y": 20, "color": "#98cc00"},
+              "player2": {"playerId": 2, "x": 25, "y": 20, "color": "#98cc00"},
+              "player3": {"playerId": 3, "x": 30, "y": 80, "color": "#33b5e5"},
+              "player4": {"playerId": 4, "x": 50, "y": 45, "color": "#33b5e5"},
+              "player5": {"playerId": 5, "x": 85, "y": 90, "color": "#ff2222"},
+              "player6": {"playerId": 6, "x": 75, "y": 20, "color": "#98cc00"}
+            },
+            {
+              "description": "Verteidigung",
+              "player1": {"playerId": 1, "x": 75, "y": 20, "color": "#98cc00"},
+              "player2": {"playerId": 2, "x": 25, "y": 20, "color": "#98cc00"},
+              "player3": {"playerId": 3, "x": 50, "y": 80, "color": "#33b5e5"},
+              "player4": {"playerId": 4, "x": 75, "y": 45, "color": "#33b5e5"},
+              "player5": {"playerId": 5, "x": 25, "y": 45, "color": "#33b5e5"},
+              "player6": {"playerId": 6, "x": 50, "y": 20, "color": "#98cc00"}
+            }
+          ]
+        },
+        "receive": {
+          "steps": [
+            {
+              "description": "Annahme",
+              "player1": {"playerId": 1, "x": 55, "y": 20, "color": "#98cc00"},
+              "player2": {"playerId": 2, "x": 25, "y": 45, "color": "#98cc00"},
+              "player3": {"playerId": 3, "x": 50, "y": 80, "color": "#33b5e5"},
+              "player4": {"playerId": 4, "x": 65, "y": 85, "color": "#f1f1f1"},
+              "player5": {"playerId": 5, "x": 75, "y": 45, "color": "#33b5e5"},
+              "player6": {"playerId": 6, "x": 75, "y": 20, "color": "#98cc00"}
+            },
+            {
+              "description": "Zuspiel",
+              "player1": {"playerId": 1, "x": 75, "y": 10, "color": "#ff2222"},
+              "player2": {"playerId": 2, "x": 25, "y": 20, "color": "#98cc00"},
+              "player3": {"playerId": 3, "x": 50, "y": 80, "color": "#33b5e5"},
+              "player4": {"playerId": 4, "x": 75, "y": 50, "color": "#33b5e5"},
+              "player5": {"playerId": 5, "x": 25, "y": 45, "color": "#33b5e5"},
+              "player6": {"playerId": 6, "x": 50, "y": 20, "color": "#98cc00"}
+            },
+            {
+              "description": "Angriff",
+              "player1": {"playerId": 1, "x": 75, "y": 15, "color": "#98cc00"},
+              "player2": {"playerId": 2, "x": 25, "y": 15, "color": "#98cc00"},
+              "player3": {"playerId": 3, "x": 50, "y": 80, "color": "#33b5e5"},
+              "player4": {"playerId": 4, "x": 75, "y": 45, "color": "#33b5e5"},
+              "player5": {"playerId": 5, "x": 25, "y": 45, "color": "#33b5e5"},
+              "player6": {"playerId": 6, "x": 50, "y": 15, "color": "#98cc00"}
+            }
+          ]
+        }
     },
       "rotation4": {
       "lineup": {

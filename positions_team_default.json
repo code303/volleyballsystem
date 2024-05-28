@@ -1,0 +1,407 @@
+{
+  "teamId": "c4a760a9-dbcf-4b0b-9a5a-8f8b9e9e6e8d",
+  "teamName": "Magic Spikers",
+  "players": [
+    {"id": 1, "role": "Zuspieler"},
+    {"id": 2, "role": "Au&szlig;en"},
+    {"id": 3, "role": "Mitte"},
+    {"id": 4, "role": "Diagonal"},
+    {"id": 5, "role": "Au&szlig;en"},
+    {"id": 6, "role": "Mitte"}
+  ],
+  "positions": {
+    "rotation1": {
+      "lineup": {
+        "description": "Aufstellung",
+        "player1": {"playerId": 1, "x": 75, "y": 45, "color": "#33b5e5"},
+        "player2": {"playerId": 2, "x": 75, "y": 20, "color": "#98cc00"},
+        "player3": {"playerId": 3, "x": 50, "y": 20, "color": "#98cc00"},
+        "player4": {"playerId": 4, "x": 25, "y": 20, "color": "#98cc00"},
+        "player5": {"playerId": 5, "x": 25, "y": 45, "color": "#33b5e5"},
+        "player6": {"playerId": 6, "x": 50, "y": 45, "color": "#33b5e5"}
+      },
+      "serve": {
+        "steps": [
+          {
+            "description": "Aufschlag",
+            "player1": {"playerId": 1, "x": 90, "y": 90, "color": "#ff2222"},
+            "player2": {"playerId": 2, "x": 65, "y": 20, "color": "#98cc00"},
+            "player3": {"playerId": 3, "x": 50, "y": 10, "color": "#98cc00"},
+            "player4": {"playerId": 4, "x": 35, "y": 20, "color": "#98cc00"},
+            "player5": {"playerId": 5, "x": 25, "y": 45, "color": "#33b5e5"},
+            "player6": {"playerId": 6, "x": 50, "y": 75, "color": "#33b5e5"}
+          },
+          {
+            "description": "Verteidigung",
+            "player1": {"playerId": 1, "x": 75, "y": 45, "color": "#33b5e5"},
+            "player2": {"playerId": 2, "x": 25, "y": 20, "color": "#98cc00"},
+            "player3": {"playerId": 3, "x": 50, "y": 20, "color": "#98cc00"},
+            "player4": {"playerId": 4, "x": 75, "y": 20, "color": "#98cc00"},
+            "player5": {"playerId": 5, "x": 25, "y": 45, "color": "#33b5e5"},
+            "player6": {"playerId": 6, "x": 50, "y": 75, "color": "#33b5e5"}
+          }
+        ]
+      },
+      "receive": {
+        "steps": [
+          {
+            "description": "Annahme",
+            "player1": {"playerId": 1, "x": 85, "y": 65, "color": "#d1d1d1"},
+            "player2": {"playerId": 2, "x": 75, "y": 55, "color": "#98cc00"},
+            "player3": {"playerId": 3, "x": 35, "y": 30, "color": "#98cc00"},
+            "player4": {"playerId": 4, "x": 10, "y": 30, "color": "#98cc00"},
+            "player5": {"playerId": 5, "x": 25, "y": 55, "color": "#33b5e5"},
+            "player6": {"playerId": 6, "x": 50, "y": 75, "color": "#33b5e5"}
+          },
+          {
+            "description": "Zuspiel",
+            "player1": {"playerId": 1, "x": 70, "y": 5, "color": "#ff2222"},
+            "player2": {"playerId": 2, "x": 85, "y": 20, "color": "#98cc00"},
+            "player3": {"playerId": 3, "x": 50, "y": 20, "color": "#98cc00"},
+            "player4": {"playerId": 4, "x": 15, "y": 20, "color": "#98cc00"},
+            "player5": {"playerId": 5, "x": 25, "y": 55, "color": "#33b5e5"},
+            "player6": {"playerId": 6, "x": 50, "y": 75, "color": "#33b5e5"}
+          },
+          {
+            "description": "Angriff",
+            "player1": {"playerId": 1, "x": 75, "y": 55, "color": "#33b5e5"},
+            "player2": {"playerId": 2, "x": 85, "y": 10, "color": "#98cc00"},
+            "player3": {"playerId": 3, "x": 50, "y": 10, "color": "#98cc00"},
+            "player4": {"playerId": 4, "x": 15, "y": 10, "color": "#98cc00"},
+            "player5": {"playerId": 5, "x": 25, "y": 55, "color": "#33b5e5"},
+            "player6": {"playerId": 6, "x": 50, "y": 75, "color": "#33b5e5"}
+          },
+          {
+            "description": "Verteidigung",
+            "player1": {"playerId": 1, "x": 75, "y": 55, "color": "#33b5e5"},
+            "player2": {"playerId": 2, "x": 15, "y": 10, "color": "#98cc00"},
+            "player3": {"playerId": 3, "x": 50, "y": 10, "color": "#98cc00"},
+            "player4": {"playerId": 4, "x": 85, "y": 10, "color": "#98cc00"},
+            "player5": {"playerId": 5, "x": 25, "y": 55, "color": "#33b5e5"},
+            "player6": {"playerId": 6, "x": 50, "y": 75, "color": "#33b5e5"}
+          }
+        ]
+      }
+    },
+      "rotation2": {
+      "lineup": {
+        "description": "Aufstellung",
+        "player1": {"playerId": 1, "x": 75, "y": 20, "color": "#98cc00"},
+        "player2": {"playerId": 2, "x": 50, "y": 20, "color": "#98cc00"},
+        "player3": {"playerId": 3, "x": 25, "y": 20, "color": "#98cc00"},
+        "player4": {"playerId": 4, "x": 25, "y": 45, "color": "#33b5e5"},
+        "player5": {"playerId": 5, "x": 50, "y": 45, "color": "#33b5e5"},
+        "player6": {"playerId": 6, "x": 75, "y": 45, "color": "#33b5e5"}
+      },
+      "serve": {
+        "steps": [
+          {
+            "description": "Aufschlag",
+            "player1": {"playerId": 1, "x": 65, "y": 15, "color": "#98cc00"},
+            "player2": {"playerId": 2, "x": 50, "y": 25, "color": "#98cc00"},
+            "player3": {"playerId": 3, "x": 35, "y": 15, "color": "#98cc00"},
+            "player4": {"playerId": 4, "x": 30, "y": 55, "color": "#33b5e5"},
+            "player5": {"playerId": 5, "x": 50, "y": 45, "color": "#33b5e5"},
+            "player6": {"playerId": 6, "x": 85, "y": 90, "color": "#ff2222"}
+          },
+          {
+            "description": "Verteidigung",
+            "player1": {"playerId": 1, "x": 75, "y": 15, "color": "#98cc00"},
+            "player2": {"playerId": 2, "x": 25, "y": 15, "color": "#98cc00"},
+            "player3": {"playerId": 3, "x": 50, "y": 15, "color": "#98cc00"},
+            "player4": {"playerId": 4, "x": 75, "y": 45, "color": "#33b5e5"},
+            "player5": {"playerId": 5, "x": 25, "y": 45, "color": "#33b5e5"},
+            "player6": {"playerId": 6, "x": 50, "y": 80, "color": "#33b5e5"}
+          }
+        ]
+      },
+      "receive": {
+        "steps": [
+          {
+            "description": "Annahme",
+            "player1": {"playerId": 1, "x": 75, "y": 10, "color": "#98cc00"},
+            "player2": {"playerId": 2, "x": 25, "y": 45, "color": "#98cc00"},
+            "player3": {"playerId": 3, "x": 5, "y": 30, "color": "#98cc00"},
+            "player4": {"playerId": 4, "x": 35, "y": 85, "color": "#f1f1f1"},
+            "player5": {"playerId": 5, "x": 50, "y": 80, "color": "#33b5e5"},
+            "player6": {"playerId": 6, "x": 75, "y": 45, "color": "#33b5e5"}
+          },
+          {
+            "description": "Zuspiel",
+            "player1": {"playerId": 1, "x": 75, "y": 10, "color": "#ff2222"},
+            "player2": {"playerId": 2, "x": 20, "y": 20, "color": "#98cc00"},
+            "player3": {"playerId": 3, "x": 50, "y": 20, "color": "#98cc00"},
+            "player4": {"playerId": 4, "x": 75, "y": 50, "color": "#33b5e5"},
+            "player5": {"playerId": 5, "x": 25, "y": 45, "color": "#33b5e5"},
+            "player6": {"playerId": 6, "x": 50, "y": 80, "color": "#33b5e5"}
+          },
+          {
+            "description": "Angriff",
+            "player1": {"playerId": 1, "x": 75, "y": 15, "color": "#98cc00"},
+            "player2": {"playerId": 2, "x": 20, "y": 15, "color": "#98cc00"},
+            "player3": {"playerId": 3, "x": 50, "y": 15, "color": "#98cc00"},
+            "player4": {"playerId": 4, "x": 75, "y": 45, "color": "#33b5e5"},
+            "player5": {"playerId": 5, "x": 25, "y": 45, "color": "#33b5e5"},
+            "player6": {"playerId": 6, "x": 50, "y": 80, "color": "#33b5e5"}
+          }
+        ]
+      }
+    },
+      "rotation3": {
+        "lineup": {
+          "description": "Aufstellung",
+          "player1": {"playerId": 1, "x": 50, "y": 20, "color": "#98cc00"},
+          "player2": {"playerId": 2, "x": 25, "y": 20, "color": "#98cc00"},
+          "player3": {"playerId": 3, "x": 25, "y": 45, "color": "#33b5e5"},
+          "player4": {"playerId": 4, "x": 50, "y": 45, "color": "#33b5e5"},
+          "player5": {"playerId": 5, "x": 75, "y": 45, "color": "#33b5e5"},
+          "player6": {"playerId": 6, "x": 75, "y": 20, "color": "#98cc00"}
+        },
+        "serve": {
+          "steps": [
+            {
+              "description": "Aufschlag",
+              "player1": {"playerId": 1, "x": 50, "y": 20, "color": "#98cc00"},
+              "player2": {"playerId": 2, "x": 25, "y": 20, "color": "#98cc00"},
+              "player3": {"playerId": 3, "x": 30, "y": 80, "color": "#33b5e5"},
+              "player4": {"playerId": 4, "x": 50, "y": 45, "color": "#33b5e5"},
+              "player5": {"playerId": 5, "x": 85, "y": 90, "color": "#ff2222"},
+              "player6": {"playerId": 6, "x": 75, "y": 20, "color": "#98cc00"}
+            },
+            {
+              "description": "Verteidigung",
+              "player1": {"playerId": 1, "x": 75, "y": 20, "color": "#98cc00"},
+              "player2": {"playerId": 2, "x": 25, "y": 20, "color": "#98cc00"},
+              "player3": {"playerId": 3, "x": 50, "y": 80, "color": "#33b5e5"},
+              "player4": {"playerId": 4, "x": 75, "y": 45, "color": "#33b5e5"},
+              "player5": {"playerId": 5, "x": 25, "y": 45, "color": "#33b5e5"},
+              "player6": {"playerId": 6, "x": 50, "y": 20, "color": "#98cc00"}
+            }
+          ]
+        },
+        "receive": {
+          "steps": [
+            {
+              "description": "Annahme",
+              "player1": {"playerId": 1, "x": 55, "y": 20, "color": "#98cc00"},
+              "player2": {"playerId": 2, "x": 25, "y": 45, "color": "#98cc00"},
+              "player3": {"playerId": 3, "x": 50, "y": 80, "color": "#33b5e5"},
+              "player4": {"playerId": 4, "x": 65, "y": 85, "color": "#f1f1f1"},
+              "player5": {"playerId": 5, "x": 75, "y": 45, "color": "#33b5e5"},
+              "player6": {"playerId": 6, "x": 75, "y": 20, "color": "#98cc00"}
+            },
+            {
+              "description": "Zuspiel",
+              "player1": {"playerId": 1, "x": 75, "y": 10, "color": "#ff2222"},
+              "player2": {"playerId": 2, "x": 25, "y": 20, "color": "#98cc00"},
+              "player3": {"playerId": 3, "x": 50, "y": 80, "color": "#33b5e5"},
+              "player4": {"playerId": 4, "x": 75, "y": 50, "color": "#33b5e5"},
+              "player5": {"playerId": 5, "x": 25, "y": 45, "color": "#33b5e5"},
+              "player6": {"playerId": 6, "x": 50, "y": 20, "color": "#98cc00"}
+            },
+            {
+              "description": "Angriff",
+              "player1": {"playerId": 1, "x": 75, "y": 15, "color": "#98cc00"},
+              "player2": {"playerId": 2, "x": 25, "y": 15, "color": "#98cc00"},
+              "player3": {"playerId": 3, "x": 50, "y": 80, "color": "#33b5e5"},
+              "player4": {"playerId": 4, "x": 75, "y": 45, "color": "#33b5e5"},
+              "player5": {"playerId": 5, "x": 25, "y": 45, "color": "#33b5e5"},
+              "player6": {"playerId": 6, "x": 50, "y": 15, "color": "#98cc00"}
+            }
+          ]
+        }
+    },
+      "rotation4": {
+      "lineup": {
+        "description": "Aufstellung",
+        "player1": {"playerId": 1, "x": 25, "y": 20, "color": "#98cc00"},
+        "player2": {"playerId": 2, "x": 25, "y": 45, "color": "#33b5e5"},
+        "player3": {"playerId": 3, "x": 50, "y": 45, "color": "#33b5e5"},
+        "player4": {"playerId": 4, "x": 75, "y": 45, "color": "#33b5e5"},
+        "player5": {"playerId": 5, "x": 75, "y": 20, "color": "#98cc00"},
+        "player6": {"playerId": 6, "x": 50, "y": 20, "color": "#98cc00"}
+      },
+      "serve": {
+        "steps": [
+          {
+            "description": "Aufschlag",
+            "player1": {"playerId": 1, "x": 35, "y": 20, "color": "#98cc00"},
+            "player2": {"playerId": 2, "x": 25, "y": 45, "color": "#33b5e5"},
+            "player3": {"playerId": 3, "x": 50, "y": 80, "color": "#33b5e5"},
+            "player4": {"playerId": 4, "x": 85, "y": 90, "color": "#ff2222"},
+            "player5": {"playerId": 5, "x": 65, "y": 20, "color": "#98cc00"},
+            "player6": {"playerId": 6, "x": 50, "y": 15, "color": "#98cc00"}
+          },
+          {
+            "description": "Verteidigung",
+            "player1": {"playerId": 1, "x": 75, "y": 20, "color": "#98cc00"},
+            "player2": {"playerId": 2, "x": 25, "y": 45, "color": "#33b5e5"},
+            "player3": {"playerId": 3, "x": 50, "y": 80, "color": "#33b5e5"},
+            "player4": {"playerId": 4, "x": 75, "y": 45, "color": "#33b5e5"},
+            "player5": {"playerId": 5, "x": 25, "y": 20, "color": "#98cc00"},
+            "player6": {"playerId": 6, "x": 50, "y": 20, "color": "#98cc00"}
+          }
+        ]
+      },
+      "receive": {
+        "steps": [
+          {
+            "description": "Annahme",
+            "player1": {"playerId": 1, "x": 5, "y": 5, "color": "#98cc00"},
+            "player2": {"playerId": 2, "x": 50, "y": 75, "color": "#33b5e5"},
+            "player3": {"playerId": 3, "x": 75, "y": 55, "color": "#33b5e5"},
+            "player4": {"playerId": 4, "x": 90, "y": 65, "color": "#d1d1d1"},
+            "player5": {"playerId": 5, "x": 25, "y": 55, "color": "#98cc00"},
+            "player6": {"playerId": 6, "x": 15, "y": 15, "color": "#98cc00"}
+          },
+          {
+            "description": "Zuspiel",
+            "player1": {"playerId": 1, "x": 85, "y": 5, "color": "#ff2222"},
+            "player2": {"playerId": 2, "x": 25, "y": 45, "color": "#33b5e5"},
+            "player3": {"playerId": 3, "x": 50, "y": 75, "color": "#33b5e5"},
+            "player4": {"playerId": 4, "x": 75, "y": 55, "color": "#33b5e5"},
+            "player5": {"playerId": 5, "x": 15, "y": 25, "color": "#98cc00"},
+            "player6": {"playerId": 6, "x": 50, "y": 25, "color": "#98cc00"}
+          },
+          {
+            "description": "Angriff",
+            "player1": {"playerId": 1, "x": 85, "y": 15, "color": "#98cc00"},
+            "player2": {"playerId": 2, "x": 25, "y": 45, "color": "#33b5e5"},
+            "player3": {"playerId": 3, "x": 50, "y": 75, "color": "#33b5e5"},
+            "player4": {"playerId": 4, "x": 75, "y": 45, "color": "#33b5e5"},
+            "player5": {"playerId": 5, "x": 15, "y": 15, "color": "#98cc00"},
+            "player6": {"playerId": 6, "x": 50, "y": 15, "color": "#98cc00"}
+          }
+        ]
+      }
+    },
+      "rotation5": {
+      "lineup": {
+        "description": "Aufstellung",
+        "player1": {"playerId": 1, "x": 25, "y": 45, "color": "#33b5e5"},
+        "player2": {"playerId": 2, "x": 50, "y": 45, "color": "#33b5e5"},
+        "player3": {"playerId": 3, "x": 75, "y": 45, "color": "#33b5e5"},
+        "player4": {"playerId": 4, "x": 75, "y": 20, "color": "#98cc00"},
+        "player5": {"playerId": 5, "x": 50, "y": 20, "color": "#98cc00"},
+        "player6": {"playerId": 6, "x": 25, "y": 20, "color": "#98cc00"}
+      },
+      "serve": {
+        "steps": [
+          {
+            "description": "Aufschlag",
+            "player1": {"playerId": 1, "x": 35, "y": 55, "color": "#33b5e5"},
+            "player2": {"playerId": 2, "x": 50, "y": 65, "color": "#33b5e5"},
+            "player3": {"playerId": 3, "x": 85, "y": 90, "color": "#ff2222"},
+            "player4": {"playerId": 4, "x": 65, "y": 25, "color": "#98cc00"},
+            "player5": {"playerId": 5, "x": 50, "y": 25, "color": "#98cc00"},
+            "player6": {"playerId": 6, "x": 35, "y": 25, "color": "#98cc00"}
+          },
+          {
+            "description": "Verteidigung",
+            "player1": {"playerId": 1, "x": 75, "y": 55, "color": "#33b5e5"},
+            "player2": {"playerId": 2, "x": 25, "y": 55, "color": "#33b5e5"},
+            "player3": {"playerId": 3, "x": 50, "y": 80, "color": "#33b5e5"},
+            "player4": {"playerId": 4, "x": 80, "y": 15, "color": "#98cc00"},
+            "player5": {"playerId": 5, "x": 20, "y": 15, "color": "#98cc00"},
+            "player6": {"playerId": 6, "x": 50, "y": 15, "color": "#98cc00"}
+          }
+        ]
+      },
+      "receive": {
+        "steps": [
+          {
+            "description": "Annahme",
+            "player1": {"playerId": 1, "x": 10, "y": 25, "color": "#d1d1d1"},
+            "player2": {"playerId": 2, "x": 50, "y": 75, "color": "#33b5e5"},
+            "player3": {"playerId": 3, "x": 75, "y": 55, "color": "#33b5e5"},
+            "player4": {"playerId": 4, "x": 90, "y": 25, "color": "#98cc00"},
+            "player5": {"playerId": 5, "x": 25, "y": 55, "color": "#98cc00"},
+            "player6": {"playerId": 6, "x": 10, "y": 10, "color": "#98cc00"}
+          },
+          {
+            "description": "Zuspiel",
+            "player1": {"playerId": 1, "x": 65, "y": 5, "color": "#ff2222"},
+            "player2": {"playerId": 2, "x": 25, "y": 45, "color": "#33b5e5"},
+            "player3": {"playerId": 3, "x": 50, "y": 75, "color": "#33b5e5"},
+            "player4": {"playerId": 4, "x": 85, "y": 25, "color": "#98cc00"},
+            "player5": {"playerId": 5, "x": 15, "y": 25, "color": "#98cc00"},
+            "player6": {"playerId": 6, "x": 50, "y": 25, "color": "#98cc00"}
+          },
+          {
+            "description": "Angriff",
+            "player1": {"playerId": 1, "x": 75, "y": 45, "color": "#33b5e5"},
+            "player2": {"playerId": 2, "x": 25, "y": 45, "color": "#33b5e5"},
+            "player3": {"playerId": 3, "x": 50, "y": 75, "color": "#33b5e5"},
+            "player4": {"playerId": 4, "x": 85, "y": 10, "color": "#98cc00"},
+            "player5": {"playerId": 5, "x": 15, "y": 10, "color": "#98cc00"},
+            "player6": {"playerId": 6, "x": 50, "y": 10, "color": "#98cc00"}
+          }
+        ]
+      }
+    },
+      "rotation6": {
+      "lineup": {
+        "description": "Aufstellung",
+        "player1": {"playerId": 1, "x": 50, "y": 45, "color": "#33b5e5"},
+        "player2": {"playerId": 2, "x": 75, "y": 45, "color": "#33b5e5"},
+        "player3": {"playerId": 3, "x": 75, "y": 20, "color": "#98cc00"},
+        "player4": {"playerId": 4, "x": 50, "y": 20, "color": "#98cc00"},
+        "player5": {"playerId": 5, "x": 25, "y": 20, "color": "#98cc00"},
+        "player6": {"playerId": 6, "x": 25, "y": 45, "color": "#33b5e5"}
+      },
+      "serve": {
+        "steps": [
+          {
+            "description": "Aufschlag",
+            "player1": {"playerId": 1, "x": 50, "y": 45, "color": "#33b5e5"},
+            "player2": {"playerId": 2, "x": 85, "y": 90, "color": "#ff2222"},
+            "player3": {"playerId": 3, "x": 65, "y": 10, "color": "#98cc00"},
+            "player4": {"playerId": 4, "x": 50, "y": 20, "color": "#98cc00"},
+            "player5": {"playerId": 5, "x": 35, "y": 10, "color": "#98cc00"},
+            "player6": {"playerId": 6, "x": 25, "y": 75, "color": "#33b5e5"}
+          },
+          {
+            "description": "Abwehr",
+            "player1": {"playerId": 1, "x": 70, "y": 45, "color": "#33b5e5"},
+            "player2": {"playerId": 2, "x": 30, "y": 45, "color": "#33b5e5"},
+            "player3": {"playerId": 3, "x": 50, "y": 10, "color": "#98cc00"},
+            "player4": {"playerId": 4, "x": 80, "y": 10, "color": "#98cc00"},
+            "player5": {"playerId": 5, "x": 20, "y": 10, "color": "#98cc00"},
+            "player6": {"playerId": 6, "x": 50, "y": 75, "color": "#33b5e5"}
+          }
+        ]
+      },
+      "receive": {
+        "steps": [
+          {
+            "description": "Annahme",
+            "player1": {"playerId": 1, "x": 70, "y": 15, "color": "#33b5e5"},
+            "player2": {"playerId": 2, "x": 85, "y": 60, "color": "#33b5e5"},
+            "player3": {"playerId": 3, "x": 85, "y": 25, "color": "#98cc00"},
+            "player4": {"playerId": 4, "x": 60, "y": 5, "color": "#98cc00"},
+            "player5": {"playerId": 5, "x": 15, "y": 60, "color": "#98cc00"},
+            "player6": {"playerId": 6, "x": 50, "y": 75, "color": "#33b5e5"}
+          },
+          {
+            "description": "Zuspiel",
+            "player1": {"playerId": 1, "x": 65, "y": 5, "color": "#ff2222"},
+            "player2": {"playerId": 2, "x": 25, "y": 55, "color": "#33b5e5"},
+            "player3": {"playerId": 3, "x": 50, "y": 25, "color": "#98cc00"},
+            "player4": {"playerId": 4, "x": 85, "y": 25, "color": "#98cc00"},
+            "player5": {"playerId": 5, "x": 15, "y": 25, "color": "#98cc00"},
+            "player6": {"playerId": 6, "x": 50, "y": 75, "color": "#33b5e5"}
+          },
+          {
+            "description": "Angriff",
+            "player1": {"playerId": 1, "x": 75, "y": 55, "color": "#33b5e5"},
+            "player2": {"playerId": 2, "x": 25, "y": 55, "color": "#33b5e5"},
+            "player3": {"playerId": 3, "x": 50, "y": 10, "color": "#98cc00"},
+            "player4": {"playerId": 4, "x": 85, "y": 10, "color": "#98cc00"},
+            "player5": {"playerId": 5, "x": 15, "y": 10, "color": "#98cc00"},
+            "player6": {"playerId": 6, "x": 50, "y": 75, "color": "#33b5e5"}
+          }
+        ]
+      }
+    }
+  }
+}

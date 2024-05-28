@@ -1,8 +1,23 @@
 const APP = {
 
-    currentPosition: 1,
-    attackPlayerColor: '#99cc00',
-    defencePlayerColor: '#33b5e5',
+    currentRotation: 'rotation1',
+    currentStep: 0,
+    currentAction: 'service',
+    teamData: {},
+    DEFENCE_COLOR: '#33b5e5',
+    ATTACK_COLOR: '#98cc00',
+
+    start: function start() {
+        window.onresize = APP.onResize;
+        window.onload = APP.onResize;
+        document.getElementById('lineupButton').addEventListener('click', (event) => {APP.init();});
+        document.getElementById('serviceButton').addEventListener('click', (event) => {APP.startServiceAnimation();});
+        document.getElementById('defenceButton').addEventListener('click', (event) => {APP.startDefenceAnimation();});
+        document.getElementById('actionButton').addEventListener('click', (event) => {APP.nextMove();});
+        APP.registerClickEventsForPositionButtons();
+        APP.registerClickEventsForPlayerNames();
+        APP.fetchPositionData();
+    },
 
     onResize: function onResize() {
         APP.resizeContentContainer();
@@ -10,220 +25,259 @@ const APP = {
     },
 
     resizeContentContainer: function resizeContentContainer() {
-        const positionSelectorStripeHeight = document.getElementById("positionSelectorStripe").scrollHeight;
-        const buttonStripeHeight = document.getElementById("buttonStripe").scrollHeight;
-        const screenWidth = document.getElementById("positionSelectorStripe").scrollWidth;
-        const availableHight = document.getElementById("container").scrollHeight - positionSelectorStripeHeight - buttonStripeHeight;
+        const headerPanelHeight = document.getElementById('header').scrollHeight;
+        const rotationSelectorPanelHeight = document.getElementById('rotationSelectorPanel').scrollHeight;
+        const buttonPanelHeight = document.getElementById('buttonPanel').scrollHeight;
+        const screenWidth = document.getElementById('rotationSelectorPanel').scrollWidth;
+        const availableHight = document.getElementById('container').scrollHeight - rotationSelectorPanelHeight - buttonPanelHeight;
         
-        document.getElementById("contentContainer").style.top = positionSelectorStripeHeight + "px";
-        document.getElementById("contentContainer").style.bottom = buttonStripeHeight + "px";
+        document.getElementById('contentContainer').style.top = (headerPanelHeight + rotationSelectorPanelHeight) + 'px';
+        document.getElementById('contentContainer').style.bottom = buttonPanelHeight + 'px';
         
         if(availableHight > screenWidth) {
-            document.getElementById("floor").style.left = 0 + "px";
-            document.getElementById("floor").style.right = 0 + "px";
-            document.getElementById("floor").style.bottom = document.getElementById("contentContainer").scrollHeight - screenWidth + "px";
+            document.getElementById('floor').style.left = 0 + 'p';
+            document.getElementById('floor').style.right = 0 + 'px';
+            document.getElementById('floor').style.bottom = document.getElementById('contentContainer').scrollHeight - screenWidth + 'px';
         } else {
-            document.getElementById("floor").style.left = (screenWidth - availableHight)/2 + "px";
-            document.getElementById("floor").style.right = (screenWidth - availableHight)/2 + "px";
-            document.getElementById("floor").style.bottom = 0 + "px";
+            document.getElementById('floor').style.left = (screenWidth - availableHight)/2 + 'px';
+            document.getElementById('floor').style.right = (screenWidth - availableHight)/2 + 'px';
+            document.getElementById('floor').style.bottom = 0 + 'px';
         }
     },
-            
+
+    lineupTeam: function lineupTeam(rotation) {
+        if (APP.teamData && APP.teamData.positions && APP.teamData.positions[rotation]) {
+            APP.showDescription('lineup');
+            const lineup = APP.teamData.positions[rotation].lineup;
+            for (let i = 1; i <= 6; i++) {
+                const name = APP.readPlayerNameFromLocalStorage(lineup['player' + i].playerId);
+                const role = APP.getPlayerRole(lineup['player' + i].playerId);
+                APP.setPlayerNameAndRole('player' + i, name, role);
+                const x = lineup['player' + i].x;
+                const y = lineup['player' + i].y;
+                const color = lineup['player' + i].color;
+                APP.moveElement('player'+ i, x, y, color); 
+            }
+        };
+    },
+
+    getPlayerRole: function getPlayerRole(id) {
+        return APP.teamData.players.find(p => p.id === id).role;
+    },
+
+    init: function init() {
+        APP.readFromLocalStorage();
+        APP.highlightCurrentPosition(APP.currentRotation); 
+        APP.changeColor(document.getElementById('serviceButton'), 'white');
+        APP.changeColor(document.getElementById('lineupButton'), '#727272');
+        APP.changeColor(document.getElementById('defenceButton'), 'white');
+        APP.lineupTeam(APP.currentRotation);
+        APP.disableActionButton();
+        APP.currentStep = 0;
+        console.log('init() -> currentRotation: ' + APP.currentRotation);
+    },
+
     // Prompts the user to input the name,
     // adjust the output on screen, save to local storage
-    promptName: function promptName(id, position) {
-        const person = prompt("Gib den Namen des Spielers ein:", "");
-        if (person != null) {
-            document.getElementById(id).innerHTML = "<b>" + person + "</b><br/><small>" + position + "</small>";
-            APP.saveToLocalStorage();
+    promptName: function promptName(id, htmlId) {
+        const name = prompt('Gib den Namen des Spielers ein:', '');
+        if (name != null) {
+            APP.setPlayerNameAndRole(htmlId, name, this.getPlayerRole(id));
+            const player = {id, name};
+            APP.savePlayerToLocalStorage(player);
         }
     },
 
-    startServiceAnimation: function startServiceAnimation() {
-        document.getElementById('setter').className ='setterOffence' + APP.currentPosition;
-        document.getElementById('outsideOne').className ='outsideOneOffence' + APP.currentPosition;
-        document.getElementById('middleOne').className ='middleOneOffence' + APP.currentPosition;
-        document.getElementById('opposite').className ='oppositeOffence' + APP.currentPosition;
-        document.getElementById('outsideTwo').className ='outsideTwoOffence' + APP.currentPosition;
-        document.getElementById('middleTwo').className ='middleTwoOffence' + APP.currentPosition;
-
-        // dis- and enable the buttons (visually)
-        APP.changeColor(document.getElementById('serviceButton'), '#727272');
-        APP.changeColor(document.getElementById('positionsButton'), 'white');
-        APP.changeColor(document.getElementById('defenceButton'), '#727272');
-    },
-
-    startDefenceAnimation: function startDefenceAnimation() {
-        document.getElementById('setter').className ='setterDefence' + APP.currentPosition;
-        document.getElementById('outsideOne').className ='outsideOneDefence' + APP.currentPosition;
-        document.getElementById('middleOne').className ='middleOneDefence' + APP.currentPosition;
-        document.getElementById('opposite').className ='oppositeDefence' + APP.currentPosition;
-        document.getElementById('outsideTwo').className ='outsideTwoDefence' + APP.currentPosition;
-        document.getElementById('middleTwo').className ='middleTwoDefence' + APP.currentPosition;
-        
-        // dis- and enable the buttons (visually)
-        APP.changeColor(document.getElementById('serviceButton'), '#727272');
-        APP.changeColor(document.getElementById('positionsButton'), 'white');
-        APP.changeColor(document.getElementById('defenceButton'), '#727272');
+    setPlayerNameAndRole: function setPlayerNameAndRole(htmlId, name, role) {
+        if (name === null || name === '') {
+            document.getElementById(htmlId).innerHTML = '<b>' + role + '</b><br/>';;
+        } else {
+            document.getElementById(htmlId).innerHTML = '<b>' + name + '</b><br/><small>' + role + '</small>';
+        }
     },
 
     changeColor: function changeColor(element, color) {
         element.style.color = color;
     },
 
-    saveToLocalStorage: function saveToLocalStorage() {
+    savePositionDataToLocalStorage: function savePositionDataToLocalStorage(data) {
+        this.saveToLocalStorage('teamData', JSON.stringify(data));
+    },
+
+    savePlayerToLocalStorage: function savePlayerToLocalStorage(playerData) {
+        APP.saveToLocalStorage('player' + playerData.id, playerData.name);
+    },
+
+    saveCurrentRotationToLocalStorage: function saveCurrentRotationToLocalStorage(rotation) {
+        APP.saveToLocalStorage('currentRotation', rotation);
+    },
+    
+    saveToLocalStorage: function saveToLocalStorage(key, value) {
         if (typeof(Storage) !== 'undefined') {
-            localStorage.currentPosition = APP.currentPosition;
-            localStorage.setter = document.getElementById('setter').innerHTML;
-            localStorage.outsideOne = document.getElementById('outsideOne').innerHTML;
-            localStorage.middleOne = document.getElementById('middleOne').innerHTML;
-            localStorage.opposite = document.getElementById('opposite').innerHTML;
-            localStorage.outsideTwo = document.getElementById('outsideTwo').innerHTML;
-            localStorage.middleTwo = document.getElementById('middleTwo').innerHTML;
+            localStorage.setItem(key, value);
         } else {
             alert('Sorry, your browser does not support web storage...');
         }
     },
         
     readFromLocalStorage: function readFromLocalStorage() {
-        APP.currentPosition = typeof localStorage.currentPosition == "undefined" ? 1 : localStorage.currentPosition;
-        document.getElementById("setter").innerHTML = typeof localStorage.setter == "undefined" ? 'Zuspieler' : localStorage.setter;
-        document.getElementById("outsideOne").innerHTML = typeof localStorage.outsideOne == "undefined" ? 'Au&szlig;en 1' : localStorage.outsideOne;
-        document.getElementById("middleOne").innerHTML = typeof localStorage.middleOne == "undefined" ? 'Mitte 1' : localStorage.middleOne;
-        document.getElementById("opposite").innerHTML = typeof localStorage.opposite == "undefined" ? 'Diagonal' : localStorage.opposite;
-        document.getElementById("outsideTwo").innerHTML = typeof localStorage.outsideTwo == "undefined" ? 'Au&szlig;en 2' : localStorage.outsideTwo;
-        document.getElementById("middleTwo").innerHTML = typeof localStorage.middleTwo == "undefined" ? 'Mitte 2' : localStorage.middleTwo;
+        APP.currentRotation = typeof localStorage.currentRotation == 'undefined' ? 'rotation1' : localStorage.currentRotation;
+        APP.teamData = typeof localStorage.teamData == 'undefined' ? {} : JSON.parse(localStorage.teamData);
     },
 
-    adjustAllOffset: function adjustAllOffset() {
-        // set the div to the middle
-        APP.adjustOffset(document.getElementById("setter"));
-        APP.adjustOffset(document.getElementById("outsideOne"));
-        APP.adjustOffset(document.getElementById("middleOne"));
-        APP.adjustOffset(document.getElementById("opposite"));
-        APP.adjustOffset(document.getElementById("outsideTwo"));
-        APP.adjustOffset(document.getElementById("middleTwo"));
+    readPlayerNameFromLocalStorage: function readPlayerNameFromLocalStorage(id) {
+        return typeof localStorage['player' + id] == 'undefined' ? "" : localStorage['player' + id];
     },
 
-    adjustOffset: function adjustOffset(div) {
-        const divWidth = div.offsetWidth;
-        const currentPosition = div.offsetLeft;// - div.scrollLeft + div.clientLeft;
-        const newPosition = currentPosition - parseInt(divWidth/2);
-        const parentWidth = div.parentNode.scrollWidth;
-        div.style.left = 100 * newPosition/parentWidth + "%";
-    },
-
-    reloadNewPosition: function reloadNewPosition(newPosition) {
-        APP.currentPosition = newPosition;
-        APP.saveToLocalStorage();
-        APP.highlightCurrentPosition(newPosition);
+    reloadNewPosition: function reloadNewPosition(newRotation) {
+        APP.currentRotation = newRotation;
+        APP.saveCurrentRotationToLocalStorage(APP.currentRotation);
+        APP.highlightCurrentPosition(newRotation);
         APP.init();
+        APP.showDescription('lineup');
     },
 
-    setBasePosition: function setBasePosition() {
-        APP.highlightCurrentPosition(APP.currentPosition);
-        switch(parseInt(APP.currentPosition)) {
-            case 1:
-                APP.setPlayersToPosition(75,50,   75,20,   50,20,   25,20,   25,50,   50,50);
-                break;
-            case 2:
-                APP.setPlayersToPosition(75,20,   50,20,   25,20,   25,50,   50,50,   75,50);
-                break;
-            case 3:
-                APP.setPlayersToPosition(50,20,   25,20,   25,50,   50,50,   75,50,   75,20);
-                break;
-            case 4:
-                APP.setPlayersToPosition(25,20,   25,50,   50,50,   75,50,   75,20,   50,20);
-                break;
-            case 5:
-                APP.setPlayersToPosition(25,50,   50,50,   75,50,   75,20,   50,20,   25,20);
-                break;
-            case 6:
-                APP.setPlayersToPosition(50,50,   75,50,   75,20,   50,20,   25,20,   25,50);
-                break;
-            default:
-                APP.setPlayersToPosition(75,50,   75,20,   50,20,   25,20,   25,50,   50,50);
-                break;
-        }
-    },
-
-    highlightCurrentPosition: function highlightCurrentPosition(position) {
+    highlightCurrentPosition: function highlightCurrentPosition(rotation) {
         let i;
         for (i = 1; i <= 6; i++) {
-            // const backgroundColor = (i === position) ? '#6c6c6c' : '#4c4c4c';
-            const backgroundColor = (i === parseInt(position)) ? '#6c6c6c' : '#4c4c4c';
-            document.getElementById("pos" + i).style.background = backgroundColor;
+            const backgroundColor = ('rotation' + i === rotation) ? '#6c6c6c' : '#4c4c4c';
+            document.getElementById('rotation' + i).style.background = backgroundColor;
         }
-    },
-
-    setPlayersToPosition: function setPlayersToPosition(setterLeft, setterTop, outsideOneLeft, outsideOneTop, middleOneLeft, middleOneTop, oppositeLeft, oppositeTop, outsideTwoLeft, outsideTwoTop, middleTwoLeft, middleTwoTop) {
-        document.getElementById("setter").style.left = setterLeft+"%";
-        document.getElementById("setter").style.top = setterTop+"%";
-        document.getElementById("setter").style.background = setterTop < 50 ? APP.attackPlayerColor : APP.defencePlayerColor;
-        document.getElementById("outsideOne").style.left = outsideOneLeft + "%";
-        document.getElementById("outsideOne").style.top = outsideOneTop + "%";
-        document.getElementById("outsideOne").style.background = outsideOneTop < 50 ? APP.attackPlayerColor : APP.defencePlayerColor;
-        document.getElementById("middleOne").style.left = middleOneLeft + "%";
-        document.getElementById("middleOne").style.top = middleOneTop + "%";
-        document.getElementById("middleOne").style.background = middleOneTop < 50 ? APP.attackPlayerColor : APP.defencePlayerColor;
-        document.getElementById("opposite").style.left = oppositeLeft + "%";
-        document.getElementById("opposite").style.top = oppositeTop + "%";
-        document.getElementById("opposite").style.background = oppositeTop < 50 ? APP.attackPlayerColor : APP.defencePlayerColor;
-        document.getElementById("outsideTwo").style.left = outsideTwoLeft + "%";
-        document.getElementById("outsideTwo").style.top = outsideTwoTop + "%";
-        document.getElementById("outsideTwo").style.background = outsideTwoTop < 50 ? APP.attackPlayerColor : APP.defencePlayerColor;
-        document.getElementById("middleTwo").style.left = middleTwoLeft + "%";
-        document.getElementById("middleTwo").style.top = middleTwoTop + "%";
-        document.getElementById("middleTwo").style.background = middleTwoTop < 50 ? APP.attackPlayerColor : APP.defencePlayerColor;
-    },
-
-    resetClassName: function resetClassName() {
-        document.getElementById("setter").className = "player";
-        document.getElementById("outsideOne").className = "player";
-        document.getElementById("middleOne").className = "player";
-        document.getElementById("opposite").className = "player";
-        document.getElementById("outsideTwo").className = "player";
-        document.getElementById("middleTwo").className = "player";
-    },
-
-    init: function init() {
-        APP.resetClassName();
-        APP.readFromLocalStorage(); 
-        APP.setBasePosition();
-        APP.adjustAllOffset();
-        APP.changeColor(document.getElementById('serviceButton'), 'white');
-        APP.changeColor(document.getElementById('positionsButton'), '#727272');
-        APP.changeColor(document.getElementById('defenceButton'), 'white');
-    },
-
-    start: function start() {
-        console.log("APP.start.");
-        window.onresize = APP.onResize;
-        window.onload = APP.onResize;
-        document.getElementById('positionsButton').addEventListener('click', (event) => {APP.init();});
-        document.getElementById('serviceButton').addEventListener('click', (event) => {APP.startServiceAnimation();});
-        document.getElementById('defenceButton').addEventListener('click', (event) => {APP.startDefenceAnimation();});
-        APP.registerClickEventsForPositionButtons();
-        APP.registerClickEventsForPlayerNames();
     },
 
     registerClickEventsForPositionButtons: function registerClickEventsForPositionButtons() {
-        document.getElementById('pos1').addEventListener('click', (event) => {APP.reloadNewPosition(1);});
-        document.getElementById('pos2').addEventListener('click', (event) => {APP.reloadNewPosition(2);});
-        document.getElementById('pos3').addEventListener('click', (event) => {APP.reloadNewPosition(3);});
-        document.getElementById('pos4').addEventListener('click', (event) => {APP.reloadNewPosition(4);});
-        document.getElementById('pos5').addEventListener('click', (event) => {APP.reloadNewPosition(5);});
-        document.getElementById('pos6').addEventListener('click', (event) => {APP.reloadNewPosition(6);});
+        document.getElementById('rotation1').addEventListener('click', (event) => {APP.reloadNewPosition('rotation1');});
+        document.getElementById('rotation2').addEventListener('click', (event) => {APP.reloadNewPosition('rotation2');});
+        document.getElementById('rotation3').addEventListener('click', (event) => {APP.reloadNewPosition('rotation3');});
+        document.getElementById('rotation4').addEventListener('click', (event) => {APP.reloadNewPosition('rotation4');});
+        document.getElementById('rotation5').addEventListener('click', (event) => {APP.reloadNewPosition('rotation5');});
+        document.getElementById('rotation6').addEventListener('click', (event) => {APP.reloadNewPosition('rotation6');});
     },
 
     registerClickEventsForPlayerNames: function registerClickEventsForPlayerNames() {
-        document.getElementById('setter').addEventListener('click', (event) => {APP.promptName('setter','Zuspieler');});
-        document.getElementById('outsideOne').addEventListener('click', (event) => {APP.promptName('outsideOne','Au&szlig;en 1');});
-        document.getElementById('middleOne').addEventListener('click', (event) => {APP.promptName('middleOne', 'Mitte 1')});
-        document.getElementById('opposite').addEventListener('click', (event) => {APP.promptName('opposite','Diagonal');});
-        document.getElementById('outsideTwo').addEventListener('click', (event) => {APP.promptName('outsideTwo','Au&szlig;en 2');});
-        document.getElementById('middleTwo').addEventListener('click', (event) => {APP.promptName('middleTwo','Mitte 2');});
+        document.getElementById('player1').addEventListener('click', (event) => {APP.promptName(1, 'player1');});
+        document.getElementById('player2').addEventListener('click', (event) => {APP.promptName(2, 'player2');});
+        document.getElementById('player3').addEventListener('click', (event) => {APP.promptName(3, 'player3');});
+        document.getElementById('player4').addEventListener('click', (event) => {APP.promptName(4, 'player4');});
+        document.getElementById('player5').addEventListener('click', (event) => {APP.promptName(5, 'player5');});
+        document.getElementById('player6').addEventListener('click', (event) => {APP.promptName(6, 'player6');});
+    },
+
+    startServiceAnimation: function startServiceAnimation() {
+        APP.changeColor(document.getElementById('serviceButton'), '#727272');
+        APP.changeColor(document.getElementById('lineupButton'), 'white');
+        APP.changeColor(document.getElementById('defenceButton'), '#727272');
+        APP.enableActionButton();
+        APP.currentStep = 0;
+        APP.currentAction = 'serve';
+        APP.animateAction(APP.currentStep, APP.currentAction);
+        const description = APP.teamData.positions[APP.currentRotation][APP.currentAction].steps[0]['description'];
+        APP.showDescription(description);
+    },
+
+    showDescription: function showDescription(description) {
+        const descriptionDiv = document.getElementById('description');
+        if (description === 'lineup') {
+            descriptionDiv.innerHTML = APP.teamData.positions[APP.currentRotation].lineup.description;
+            return;
+        } else {
+            descriptionDiv.innerHTML = description;
+        }
+    },
+
+    startDefenceAnimation: function startDefenceAnimation() {
+        APP.changeColor(document.getElementById('serviceButton'), '#727272');
+        APP.changeColor(document.getElementById('lineupButton'), 'white');
+        APP.changeColor(document.getElementById('defenceButton'), '#727272');
+        APP.enableActionButton();
+        APP.currentStep = 0;
+        APP.currentAction = 'receive';
+        APP.animateAction(APP.currentStep, APP.currentAction);
+        const description = APP.teamData.positions[APP.currentRotation][APP.currentAction].steps[0]['description'];
+        APP.showDescription(description);
+    },
+
+    getWidthOfElement: function getWidthOfElement(elementId) {
+        const element = document.getElementById(elementId);
+        return element.getBoundingClientRect().width;
+    },
+
+    getHeightOfElement: function getHeightOfElement(elementId) {
+        const element = document.getElementById(elementId);
+        return element.getBoundingClientRect().height;
+    },
+
+    convertXPositionFromPercentToPixel: function convertXPositionFromPercentToPixel(positionInPercent) {
+        const containerWidth = APP.getWidthOfElement('floor');
+        return containerWidth * positionInPercent / 100;
+    },
+
+    convertYPositionFromPercentToPixel: function convertYPositionFromPercentToPixel(positionInPercent) {
+        const containerHeight = APP.getHeightOfElement('floor');
+        return containerHeight * positionInPercent / 100;
+    },
+
+    moveElement: function moveElement(elementId, x, y, color) {
+        const element = document.getElementById(elementId);
+        const newLeft = APP.convertXPositionFromPercentToPixel(x) - element.clientWidth / 2;
+        const newTop = APP.convertYPositionFromPercentToPixel(y) - element.clientHeight / 2;
+        element.style.transform = 'translate(' + newLeft + 'px, ' + newTop + 'px)';
+        element.style.backgroundColor = color;
+    },
+
+    animateAction: function animateAction(stepNumber, action) {
+        const rotation = APP.currentRotation;
+        if (APP.teamData && APP.teamData.positions && APP.teamData.positions[rotation]) {
+            const nextPositions = APP.teamData.positions[rotation][action].steps[stepNumber];
+            for (let i = 1; i <= 6; i++) {
+                const name = APP.readPlayerNameFromLocalStorage(nextPositions['player' + i].playerId);
+                const role = APP.getPlayerRole(nextPositions['player' + i].playerId);
+                APP.setPlayerNameAndRole('player' + i, name, role);
+                const x = nextPositions['player' + i].x;
+                const y = nextPositions['player' + i].y;
+                const color = nextPositions['player' + i].color;
+                APP.moveElement('player'+ i, x, y, color); 
+            }
+            const description = APP.teamData.positions[APP.currentRotation][APP.currentAction].steps[stepNumber]['description'];
+            APP.showDescription(description);
+        };
+        
+        if (stepNumber >= APP.getNumberOfSteps(APP.currentRotation, action) - 1) {
+            APP.disableActionButton();
+        }
+    },
+
+    getNumberOfSteps: function getNumberOfSteps(rotation, action) {
+        return APP.teamData.positions[rotation][action]['steps'].length;
+    },
+
+    fetchPositionData: function fetchPositionData() {
+        const url = './positions_team_default.json';
+        fetch(url)
+        .then((resp) => resp.json())
+        .then(function(data) {
+        console.log(data);
+            APP.savePositionDataToLocalStorage(data);
+            APP.init();
+        })
+        .catch(function(error) {
+            console.log('Fetching JSON data failed. ' + error);
+        });
+    },
+
+    nextMove: function nextMove() {
+        APP.currentStep++;
+        APP.animateAction(APP.currentStep, APP.currentAction);
+    },
+
+    disableActionButton: function disableActionButton() {
+        document.getElementById('actionButton').style.display = 'none';
+    },
+
+    enableActionButton: function enableActionButton() {
+        document.getElementById('actionButton').style.display = 'block';
     }
+
 };
 
 APP.start();

@@ -6,17 +6,29 @@ html,body {
     background-color: #fff;
     color: #000;
     font-family:Verdana;
-    }
+}
+
+#header {
+    display: none;/*flex;*/
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.7em;
+}
+
+#header span {
+    color: #777777;
+}
+
 #container {
     background:#eeeeee;
     height:100%;
 }
 
-#positionSelectorStripe {
+#rotationSelectorPanel {
     background:#4c4c4c;
 }
 
-.position {
+.rotationSelector {
     float:left;
     width:16.66666%;
     box-sizing:border-box;
@@ -50,25 +62,30 @@ html,body {
     top: 0px;
     right: 0px;
     left:0px;
+    z-index: -120;
 }
 
-#attack {
+#attackZone {
     position:relative;
     height: 33.3333%;
     background:#c7dde5;
+    z-index: -100;
 }
 
 /* players -> all child nodes of the floor element (other than the first element (attack zone))*/
-#floor > *:not(:first-child)
+#floor > *:not(:last-child)
 {
     position:absolute;
     padding: 10px;
     box-shadow: 3px 3px 5px #888;
     border-radius: 15px;
     text-align:center;
+    transition: transform 1.5s ease, background-color 1.5s ease;
+    width: min-content; 
+    height: min-content;
 }
 
-#buttonStripe {
+#buttonPanel {
     background:#444;
     height:auto;
     position:fixed;
@@ -82,7 +99,7 @@ html,body {
     background-image: linear-gradient(top left, #4c4c4c 80%, #444 100%);
 }
 
-    div.buttonPositions, div.buttonService, div.buttonDefence {
+div.buttonPositions, div.buttonService, div.buttonDefence {
     overflow: auto;
     height: auto !important;
     padding-top: 10px;
@@ -95,7 +112,7 @@ html,body {
     background-image: linear-gradient(top left, #4c4c4c 80%, #444 100%);
 }
 
-    div.buttonPositions {
+div.buttonPositions {
     width:33.333%;
     float:left;
     color:#727272;
@@ -111,4 +128,71 @@ div.buttonDefence {
     width:33.333%;
     float:left;
     color:white;
+}
+
+.attackPlayerColor {
+    background-color: #98cc00;
+}
+
+.defencePlayerColor {
+    background-color: #33b5e5;
+}
+
+#floor > #description {
+    background: #dfe9ed;
+    box-shadow: 0 0 0px #888;
+    color:#4b4b4b;
+    padding: 0.5em;
+    text-align: center;
+    font-size: 1.0em;
+    bottom: 0;
+}
+
+.hamburger-menu {
+ cursor: pointer;
+ display: inline-block;
+ width: 24px;
+ height: 22px;
+ position: relative;
+ margin-right: 0.2em;
+}
+
+.hamburger-menu span {
+ display: block;
+ background-color: #cccccc;
+ height: 2px;
+ width: 100%;
+ position: absolute;
+ left: 0;
+ transition: all 0.3s linear;
+}
+
+.hamburger-menu span:nth-child(1) {
+ top: 0;
+}
+
+.hamburger-menu span:nth-child(2) {
+ top: 9px;
+}
+
+.hamburger-menu span:nth-child(3) {
+ top: 18px;
+}
+
+.floating-action-button {
+    display: none;
+    position:fixed;
+    bottom: 70px;
+    right: 40px;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background-color: #33b5e5;
+    color: #fff;
+    text-align: center;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+    line-height: 56px;
+    cursor: pointer;
+    border: none;
+    font-size: 24px;
 }
